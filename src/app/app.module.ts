@@ -9,6 +9,11 @@ import { BejelentkezesComponent } from './bejelentkezes/bejelentkezes.component'
 import { RegiComponent } from './regi/regi.component';
 import { KosarComponent } from './kosar/kosar.component';
 import { RolunkComponent } from './rolunk/rolunk.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -22,7 +27,11 @@ import { RolunkComponent } from './rolunk/rolunk.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
+    provideStorage(() => getStorage())
   ],
   providers: [],
   bootstrap: [AppComponent]

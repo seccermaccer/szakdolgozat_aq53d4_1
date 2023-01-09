@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "elektroworld-f4a4a": {
+      "hosting": {
+        "my-app": [
+          "elektroworld-f4a4a"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "elektroworld-f4a4a"
+  }
+}
