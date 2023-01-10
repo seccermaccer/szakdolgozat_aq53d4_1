@@ -43,8 +43,16 @@
           </div>
         </div>
 
+        <ng-container *ngIf="authService.currentUser$ | async as user;else loginButton">
+          <li><a (click)="logout()" class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400 cursor-pointer" routerLinkActive="active-link">Kijelentkezés</a></li>
+        </ng-container>
+
         <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400" routerLink="/shop-menu" routerLinkActive="active-link">Shop menü</a></li>
-        <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400" routerLink="/bejelentkezes" routerLinkActive="active-link">Bejelentkezés</a></li>
+        <ng-template #loginButton>
+          <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400" routerLink="/bejelentkezes" routerLinkActive="active-link">Bejelentkezés</a></li>
+        </ng-template>
+
+
         <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400" routerLink="/regi" routerLinkActive="active-link">Regisztráció</a></li>
         <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400" routerLink="/kosar" routerLinkActive="active-link">Kosár</a></li>
         <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400 lg:mb-0 mb-2" routerLink="/rolunk" routerLinkActive="active-link">Rólunk</a></li>
