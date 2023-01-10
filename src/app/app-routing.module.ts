@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import {canActivate, redirectUnauthorizedTo,redirectLoggedInTo} from '@angular/fire/auth-guard';
+
+const redirectToHome = () => redirectLoggedInTo(['fooldal']);
 
 const routes: Routes = [
   {
@@ -8,13 +11,15 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'bejelentkezes', loadChildren: () => import('./bejelentkezes/bejelentkezes.module').then(m => m.BejelentkezesModule)
+    path: 'bejelentkezes', loadChildren: () => import('./bejelentkezes/bejelentkezes.module').then(m => m.BejelentkezesModule),
+    ...canActivate(redirectToHome)
   },
   {
     path: 'kosar', loadChildren: () => import('./kosar/kosar.module').then(m => m.KosarModule)
   },
   {
-    path: 'regi', loadChildren: () => import('./regi/regi.module').then(m => m.RegiModule)
+    path: 'regi', loadChildren: () => import('./regi/regi.module').then(m => m.RegiModule),
+    ...canActivate(redirectToHome)
   },
   {
     path: 'rolunk', loadChildren: () => import('./rolunk/rolunk.module').then(m => m.RolunkModule)

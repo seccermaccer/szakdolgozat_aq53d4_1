@@ -44,7 +44,7 @@
         </div>
 
         <ng-container *ngIf="authService.currentUser$ | async as user;else loginButton">
-          <li><a (click)="logout()" class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400 cursor-pointer" routerLinkActive="active-link">Kijelentkezés</a></li>
+          <li><a [matMenuTriggerFor]="userMenu" class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400 cursor-pointer" routerLinkActive="active-link"><mat-icon>account_circle</mat-icon> {{user.displayName}} <mat-icon>expand_more</mat-icon> </a></li>
         </ng-container>
 
         <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400" routerLink="/shop-menu" routerLinkActive="active-link">Shop menü</a></li>
@@ -65,3 +65,9 @@
 </html>
 
 <router-outlet></router-outlet>
+
+<mat-menu #userMenu="matMenu">
+  <button mat-menu-item (click)="logout()">Kijelentkezés</button>
+  <button mat-menu-item  routerLink="/profil" routerLinkActive="active-link">Profil</button>
+
+</mat-menu>
