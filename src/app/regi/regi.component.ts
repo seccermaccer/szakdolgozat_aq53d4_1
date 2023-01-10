@@ -65,14 +65,17 @@ export class RegiComponent implements OnInit {
   submit(){
     if(!this.signUpForm.valid) return;
 
-    const {name,email,lakcim,telefonszam,password } = this.signUpForm.value;
-    this.authService.signUp(<string>name,<string>email,<string>lakcim,<string>telefonszam,<string>password).subscribe(() => {
-      this.router.navigate(['/fooldal']);
-      window.alert("Sikeres regisztráció!");
-    },error =>{
-      console.error(error)
-      window.alert('Sikertelen regisztráció!');
-    })
+
+    console.log(this.signUpForm.value);
+    this.authService.signUp(<string>this.signUpForm.get('email')?.value,<string>this.signUpForm.get('password')?.value).then(cred =>{
+      console.log(cred);
+      window.alert("Sikeres regisztráció!")
+      this.router.navigate(['bejelentkezes'])
+    }).catch(error =>{
+      console.error(error);
+      window.alert("Sikertelen regisztráció!")
+    } );
+
   }
 
 }

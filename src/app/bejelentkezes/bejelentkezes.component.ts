@@ -37,13 +37,14 @@ export class BejelentkezesComponent implements OnInit {
     }
 
     const {email,password} = this.loginForm.value;
-    this.authService.login(<string>email,<string>password).subscribe(() => {
+    this.authService.login(<string>email,<string>password).then(cred => {
+      console.log(cred);
       this.router.navigate(['/fooldal']);
       window.alert("Sikeres bejelentkezés!");
-    },error =>{
-        console.error(error)
-        window.alert('Sikertelen bejelentkezés!Kérjük próbálja újra!');
-    })
+    }).catch( error => {
+      console.error(error)
+      window.alert('Sikertelen bejelentkezés!Kérjük próbálja újra!');
+    });
 
   }
 

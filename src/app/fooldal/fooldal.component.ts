@@ -8,7 +8,6 @@ import {AuthService} from "../shared/services/auth.service";
 })
 export class FooldalComponent implements OnInit {
 
-  user$ = this.authService.currentUser$;
 
   constructor(private authService: AuthService) { }
 

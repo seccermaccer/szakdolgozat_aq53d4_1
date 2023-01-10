@@ -16,6 +16,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import {MatIconModule} from "@angular/material/icon";
 import {MatMenuModule} from "@angular/material/menu";
+import {AngularFireModule} from "@angular/fire/compat";
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import {MatMenuModule} from "@angular/material/menu";
         BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
+        AngularFireModule.initializeApp(environment.firebase),
         provideFirebaseApp(() => initializeApp(environment.firebase)),
         provideAuth(() => getAuth()),
         provideFirestore(() => getFirestore()),
