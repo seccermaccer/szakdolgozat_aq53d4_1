@@ -10,6 +10,8 @@ import {Router} from "@angular/router";
 })
 export class BejelentkezesComponent implements OnInit {
 
+  alert: boolean = false;
+
   loginForm = new FormGroup({
     email: new FormControl('',[Validators.required,Validators.email]),
     password: new FormControl('',Validators.required)
@@ -36,9 +38,19 @@ export class BejelentkezesComponent implements OnInit {
 
     const {email,password} = this.loginForm.value;
     this.authService.login(<string>email,<string>password).subscribe(() => {
-      this.router.navigate(['/profil']);
+      this.router.navigate(['']);
+      window.alert("Sikeres bejelentkezés!");
+    },error =>{
+        console.error(error)
+        window.alert('Sikertelen bejelentkezés!Kérjük próbálja újra!');
     })
 
+  }
+
+
+
+  closeAlert(){
+    this.alert=false;
   }
 
 }
