@@ -38,7 +38,7 @@ export class BejelentkezesComponent implements OnInit {
 
     const {email,password} = this.loginForm.value;
     this.authService.login(<string>email,<string>password).subscribe(() => {
-      this.router.navigate(['']);
+      this.router.navigate(['/fooldal']);
       window.alert("Sikeres bejelentkezés!");
     },error =>{
         console.error(error)
