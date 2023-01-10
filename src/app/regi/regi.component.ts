@@ -69,7 +69,8 @@ export class RegiComponent implements OnInit {
     console.log(this.signUpForm.value);
     this.authService.signUp(<string>this.signUpForm.get('email')?.value,<string>this.signUpForm.get('password')?.value).then(cred =>{
       console.log(cred);
-      window.alert("Sikeres regisztráció!")
+      this.authService.sendEmail(cred.user);
+      window.alert("Sikeres regisztráció!Erősítse meg az emailjét mielőtt belép!")
       this.router.navigate(['bejelentkezes'])
     }).catch(error =>{
       console.error(error);
