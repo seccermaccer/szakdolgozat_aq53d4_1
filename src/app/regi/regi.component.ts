@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators} from "@angular/forms";
 import {AuthService} from "../shared/services/auth.service";
 import {Router} from "@angular/router";
+import {User} from "../shared/models/User";
+import {UserService} from "../shared/services/user.service";
 
 export function passwordsMatchValidator(): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {
@@ -34,7 +36,7 @@ export class RegiComponent implements OnInit {
   }, { validators: passwordsMatchValidator() }
   );
 
-  constructor(private authService: AuthService,private router: Router) { }
+  constructor(private authService: AuthService,private router: Router,private userService: UserService) { }
 
   ngOnInit(): void {
   }
@@ -77,6 +79,21 @@ export class RegiComponent implements OnInit {
       this.authService.sendEmail(cred.user);
       window.alert("Sikeres regisztráció!Erősítse meg az emailjét mielőtt belép!")
       this.router.navigate(['bejelentkezes'])
+      const user: User = {
+        id: cred.user?.uid as string,
+        name: <string>this.signUpForm.get('name')?.value,
+        email: <string>this.signUpForm.get('email')?.value,
+        username: <string>this.signUpForm.get('email')?.value?.split('@')[0],
+        lakcim: <string>this.signUpForm.get('lakcim')?.value,
+        telefonszam: <string>this.signUpForm.get('telefonszam')?.value,
+
+      };
+      this.userService.create(user).then(_ =>{
+        console.log('Sikeres beszúrás')
+      }).catch(error =>{
+        console.log(error)
+      })
+
     }).catch(error =>{
       console.error(error);
       window.alert("Sikertelen regisztráció!")
