@@ -29,7 +29,8 @@ export class RegiComponent implements OnInit {
     lakcim: new FormControl('',Validators.required),
     telefonszam: new FormControl('',Validators.required),
     password: new FormControl('',Validators.required),
-    confirmPassword: new FormControl('',Validators.required)
+    confirmPassword: new FormControl('',Validators.required),
+    aszf: new FormControl('',Validators.required),
   }, { validators: passwordsMatchValidator() }
   );
 
@@ -60,6 +61,10 @@ export class RegiComponent implements OnInit {
 
   get telefonszam(){
     return this.signUpForm.get('telefonszam');
+  }
+
+  get aszf(){
+    return this.signUpForm.get('aszf');
   }
 
   submit(){
