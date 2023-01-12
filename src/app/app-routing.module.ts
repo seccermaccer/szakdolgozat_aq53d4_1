@@ -33,6 +33,7 @@ const routes: Routes = [
   { path: 'profil', loadChildren: () => import('./profil/profil.module').then(m => m.ProfilModule) },
   { path: 'aszf', loadChildren: () => import('./aszf/aszf.module').then(m => m.AszfModule) },
   { path: 'fooldal', loadChildren: () => import('./fooldal/fooldal.module').then(m => m.FooldalModule) },
+  { path: 'forgot-password', loadChildren: () => import('./forgot-password/forgot-password.module').then(m => m.ForgotPasswordModule) },
   { path: '**',
     redirectTo: '/not-found'
   }
