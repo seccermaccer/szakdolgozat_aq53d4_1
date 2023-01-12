@@ -1,5 +1,5 @@
 <!-- component -->
-<div style="background-color : #f4f4f0" class=" sm:mx-32 lg:mx-32 xl:mx-72 rounded-lg">
+<div style="background-color : #f4f4f0" class=" sm:mx-32 lg:mx-32 xl:mx-72 rounded-lg" *ngIf="user">
   <div class="flex justify-between container mx-auto">
     <div class="w-full">
       <div class="mt-4 px-4">
@@ -30,7 +30,7 @@
   <span class="text-md font-semibold text-zinc-900" htmlFor="name">
     Név
   </span>
-            <p class="w-full bg-transparent p-0 text-sm  text-black-500 focus:outline-none h-1">Kovács Eszking</p>
+            <p class="w-full bg-transparent p-0 text-sm  text-black-500 focus:outline-none h-1">{{user.name}}</p>
 
           </label>
 
@@ -41,7 +41,7 @@
     Email
   </span>
 
-            <p class="w-full bg-transparent p-0 text-sm  text-black-500 focus:outline-none h-1">sacosmacos43@gmail.com</p>
+            <p class="w-full bg-transparent p-0 text-sm  text-black-500 focus:outline-none h-1">{{user.email}}</p>
           </label>
 
 
@@ -50,7 +50,7 @@
     Lakcím
   </span>
 
-            <p class="w-full bg-transparent p-0 text-sm  text-black-500 focus:outline-none h-1">6656,Zedország,Keccermeccer utca 34</p>
+            <p class="w-full bg-transparent p-0 text-sm  text-black-500 focus:outline-none h-1">{{user.lakcim}}</p>
 
           </label>
 
@@ -60,7 +60,7 @@
   </span>
 
 
-            <p class="w-full bg-transparent p-0 text-sm  text-black-500 focus:outline-none h-1">+36308395275</p>
+            <p class="w-full bg-transparent p-0 text-sm  text-black-500 focus:outline-none h-1">{{user.telefonszam}}</p>
 
           </label>
 
