@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from "./shared/services/auth.service";
 import {Router} from "@angular/router";
-import {user} from "@angular/fire/auth";
 
 @Component({
   selector: 'app-root',
@@ -16,10 +15,14 @@ export class AppComponent implements  OnInit{
 
   ngOnInit(): void {
        this.authService.isUserLoggedIn().subscribe(user => {
+         console.log(user);
          this.loggedInUser = user;
+         localStorage.setItem('user',JSON.stringify(this.loggedInUser));
+
        },error => {
          console.error(error);
-       })
+         localStorage.setItem('user',JSON.stringify(null));
+       });
     }
 
   logout(){
