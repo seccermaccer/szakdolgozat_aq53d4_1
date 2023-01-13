@@ -1,6 +1,6 @@
 <!-- component -->
 <div style="background-color : #f4f4f0" class=" sm:mx-32 lg:mx-32 xl:mx-72 rounded-lg" *ngIf="user">
-  <div class="flex justify-between container mx-auto">
+  <div class="flex justify-between container mx-auto" *ngIf="user$ | async as users">
     <div class="w-full">
       <div class="mt-4 px-4">
         <h1 class="text-3xl font-semibold py-2 px-5">Profil</h1>
@@ -8,12 +8,12 @@
         <form class="mx-5 my-5">
 
 
-          <div class="shrink-0 mt-5">
-            <img class="h-20 w-20 object-cover rounded-full" src="http://cdn.onlinewebfonts.com/svg/img_364496.png" alt="Current profile photo" />
+          <div class="shrink-0 mt-5" >
+            <img class="h-20 w-20 object-cover rounded-full" [src]="users.photoURL ?? 'assets/images/image-placeholder.png'" alt="Current profile photo" />
           </div>
           <label class="block pt-2">
             <span class="sr-only t-2">Válaszd ki a profilképedet</span>
-            <input type="file" class="w-full file:cursor-pointer cursor-pointer text-sm text-slate-500
+            <input #inputField accept=".jpg,.png"  (change)="uploadImage($event,user)" type="file" class="w-full file:cursor-pointer cursor-pointer text-sm text-slate-500
       file:mr-4 file:py-2 file:px-4
       file:rounded-full file:border-0
       file:text-sm file:font-semibold
@@ -21,7 +21,7 @@
       hover:file:bg-green-300
     "/>
 
-            <Button class="mt-2 border-2 px-5 py-2 rounded-lg border-black border-b-4 font-black translate-y-2 border-l-4">
+            <Button (click)="inputField" class="mt-2 border-2 px-5 py-2 rounded-lg border-black border-b-4 font-black translate-y-2 border-l-4">
               Kép feltöltése
             </Button>
           </label>

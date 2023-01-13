@@ -1,13 +1,17 @@
 import { Injectable } from '@angular/core';
 import {AngularFireAuth} from "@angular/fire/compat/auth";
 import {Router} from "@angular/router";
+import {Auth, authState, updateProfile, UserInfo} from "@angular/fire/auth";
+import {concatMap, Observable, of} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private authh: AngularFireAuth,private router: Router) { }
+  currentUser$ = authState(this.auth);
+
+  constructor(private authh: AngularFireAuth,private router: Router,private auth: Auth) { }
 
   sendEmail(user: any) {
     user.sendEmailVerification();
@@ -36,5 +40,16 @@ export class AuthService {
     }).catch(error => {
       window.alert(error);
     });
+  }
+
+  updateProfileData(profileData: Partial<UserInfo>): Observable<any>{
+    const user = this.auth.currentUser;
+    return of(user).pipe(
+      concatMap(user => {
+        if(!user) throw new Error('Nincs azonosítva a felhasználó!');
+
+        return updateProfile(user,profileData);
+      })
+    );
   }
 }

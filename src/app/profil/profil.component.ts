@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {UserService} from "../shared/services/user.service";
 import {User} from "../shared/models/User";
+import {AuthService} from "../shared/services/auth.service";
+import {ImageUploadService} from "../shared/services/image-upload.service";
+import {concatMap} from "rxjs";
 
 @Component({
   selector: 'app-profil',
@@ -11,7 +14,9 @@ export class ProfilComponent implements OnInit {
 
   user?: User;
 
-  constructor(private userS: UserService) { }
+  user$ = this.authS.currentUser$;
+
+  constructor(private userS: UserService,private authS: AuthService,private imageS: ImageUploadService) { }
 
   ngOnInit(): void {
     const user = JSON.parse(localStorage.getItem('user') as string) as firebase.default.User;
@@ -20,6 +25,12 @@ export class ProfilComponent implements OnInit {
     },error => {
       console.error(error);
     })
+  }
+
+  uploadImage(event: any,user: User){
+    this.imageS.uploadImage(event.target.files[0],`images/profile/${user.id}`).pipe(
+      concatMap((photoURL) => this.authS.updateProfileData({photoURL}))
+    ).subscribe();
   }
 
 }
