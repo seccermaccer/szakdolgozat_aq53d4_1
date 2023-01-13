@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {canActivate, redirectLoggedInTo} from '@angular/fire/auth-guard';
+import {canActivate, redirectLoggedInTo, redirectUnauthorizedTo} from '@angular/fire/auth-guard';
 
 const redirectToHome = () => redirectLoggedInTo(['fooldal']);
+const redirectToLogin = () => redirectUnauthorizedTo(['bejelentkezes']);
 
 const routes: Routes = [
   {
@@ -30,7 +31,7 @@ const routes: Routes = [
   {
     path: 'not-found', loadChildren: () => import('./not-found/not-found.module').then(m => m.NotFoundModule)
   },
-  { path: 'profil', loadChildren: () => import('./profil/profil.module').then(m => m.ProfilModule) },
+  { path: 'profil', loadChildren: () => import('./profil/profil.module').then(m => m.ProfilModule),...canActivate(redirectToLogin) },
   { path: 'aszf', loadChildren: () => import('./aszf/aszf.module').then(m => m.AszfModule) },
   { path: 'fooldal', loadChildren: () => import('./fooldal/fooldal.module').then(m => m.FooldalModule) },
   { path: 'forgot-password', loadChildren: () => import('./forgot-password/forgot-password.module').then(m => m.ForgotPasswordModule) },
