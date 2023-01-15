@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from "../shared/models/User";
 import {UserService} from "../shared/services/user.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-update-profile',
@@ -11,7 +12,7 @@ export class UpdateProfileComponent implements OnInit {
 
   user?: User;
 
-  constructor(private userS: UserService) { }
+  constructor(private userS: UserService,private router: Router) { }
 
   ngOnInit(): void {
     const user = JSON.parse(localStorage.getItem('user') as string) as firebase.default.User;
@@ -27,6 +28,7 @@ export class UpdateProfileComponent implements OnInit {
       this.userS.update(<User>this.user).then(user => {
         console.log('user',user);
         window.alert('Sikeres adat megváltoztatás!')
+        this.router.navigate(['profil'])
       }).catch(error => {
         console.error(error);
       });

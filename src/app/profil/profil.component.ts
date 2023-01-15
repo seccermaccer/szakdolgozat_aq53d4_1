@@ -33,4 +33,12 @@ export class ProfilComponent implements OnInit {
     ).subscribe();
   }
 
+  deleteUser($id: string){
+    if(confirm("Ez egy végleges művelet.Biztos kiszeretnéd törölni a fiókodat?")){
+      this.userS.delete($id);
+      this.authS.logout();
+    }
+
+  }
+
 }

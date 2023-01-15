@@ -96,7 +96,7 @@ export class RegiComponent implements OnInit {
 
     }).catch(error =>{
       console.error(error);
-      window.alert("Sikertelen regisztráció!")
+      window.alert("Sikertelen regisztráció!"+error)
     } );
 
   }
