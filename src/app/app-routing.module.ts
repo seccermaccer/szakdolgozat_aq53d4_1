@@ -35,6 +35,7 @@ const routes: Routes = [
   { path: 'aszf', loadChildren: () => import('./aszf/aszf.module').then(m => m.AszfModule) },
   { path: 'fooldal', loadChildren: () => import('./fooldal/fooldal.module').then(m => m.FooldalModule) },
   { path: 'forgot-password', loadChildren: () => import('./forgot-password/forgot-password.module').then(m => m.ForgotPasswordModule) },
+  { path: 'update-profile', loadChildren: () => import('./update-profile/update-profile.module').then(m => m.UpdateProfileModule),...canActivate(redirectToLogin) },
   { path: '**',
     redirectTo: '/not-found'
   }
