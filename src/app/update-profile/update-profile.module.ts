@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { UpdateProfileRoutingModule } from './update-profile-routing.module';
 import { UpdateProfileComponent } from './update-profile.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -11,7 +12,9 @@ import { UpdateProfileComponent } from './update-profile.component';
   ],
   imports: [
     CommonModule,
-    UpdateProfileRoutingModule
+    UpdateProfileRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class UpdateProfileModule { }
