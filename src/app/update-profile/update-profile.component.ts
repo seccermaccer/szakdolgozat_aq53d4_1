@@ -22,4 +22,15 @@ export class UpdateProfileComponent implements OnInit {
     })
   }
 
+  onSubmit(userProfileForm: { form: { valid: any; }; }){
+    if(userProfileForm.form.valid){
+      this.userS.update(<User>this.user).then(user => {
+        console.log('user',user);
+        window.alert('Sikeres adat megváltoztatás!')
+      }).catch(error => {
+        console.error(error);
+      });
+    }
+  }
+
 }
