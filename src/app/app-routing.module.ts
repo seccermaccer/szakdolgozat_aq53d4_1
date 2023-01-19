@@ -36,6 +36,7 @@ const routes: Routes = [
   { path: 'fooldal', loadChildren: () => import('./fooldal/fooldal.module').then(m => m.FooldalModule) },
   { path: 'forgot-password', loadChildren: () => import('./forgot-password/forgot-password.module').then(m => m.ForgotPasswordModule) },
   { path: 'update-profile', loadChildren: () => import('./update-profile/update-profile.module').then(m => m.UpdateProfileModule),...canActivate(redirectToLogin) },
+  { path: 'termekek', loadChildren: () => import('./shop-menu/termekek/termekek.module').then(m => m.TermekekModule) },
   { path: '**',
     redirectTo: '/not-found'
   }
@@ -45,4 +46,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
