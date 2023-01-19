@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from "../shared/services/auth.service";
+import {ProductService} from "../shared/services/product.service";
 
 @Component({
   selector: 'app-shop-menu',
@@ -19,7 +20,7 @@ export class ShopMenuComponent implements OnInit {
 
 
 
-  constructor(private authS: AuthService) { }
+  constructor(private authS: AuthService,private productService: ProductService) { }
 
   ngOnInit(): void {
     this.authS.getCategories().subscribe(data => {
@@ -33,6 +34,10 @@ export class ShopMenuComponent implements OnInit {
       this.categoryImages7 = this.categories.map((category: { imageUrl7: any; }) => category.imageUrl7);
       this.categoryImages8 = this.categories.map((category: { imageUrl8: any; }) => category.imageUrl8);
     });
+  }
+
+  onClick(id: number) {
+    this.productService.setSelectedProductId(id);
   }
 
 }

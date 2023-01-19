@@ -11,4 +11,8 @@ export class TermekService {
   getProductsByCategory(category: string) {
     return this.db.collection('Products', ref => ref.where('category', '==', category)).valueChanges();
   }
+
+  getProductsByCategory2(category: string) {
+    return this.db.collection('Products', ref => ref.where('category', '==', category)).valueChanges();
+  }
 }

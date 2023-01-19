@@ -12,7 +12,7 @@
 
 
 <div  style="max-width: 300px">
-  <div *ngFor="let category of categories; let i = index" routerLink="/termekek">
+  <div *ngFor="let category of categories; let i = index" routerLink="/termekek" (click)="onClick(category.id)">
     <img class="h-30  rounded-lg cursor-pointer" [src]="categoryImages[i]" style="max-height: 300px;margin-left: 5.5vw">
     <figcaption class="mt-2 text-sm px-10 text-black dark:text-gray-400 cursor-pointer" style="margin-left: 6.6vw;white-space: nowrap;font-weight: bold;font-size: 20px">{{ category.name1 }}</figcaption>
   </div>
@@ -50,7 +50,7 @@
     <figcaption class="mt-2 text-sm px-10 text-black dark:text-gray-400" style="margin-left: 53vw;max-width: 300px;white-space: nowrap;font-weight: bold;font-size: 20px">{{ category.name2 }}</figcaption>
   </div>
 
-  <div *ngFor="let category of categories; let i = index" routerLink="/termekek">
+  <div *ngFor="let category of categories; let i = index" routerLink="/termekek"  (click)="onClick(category.id)">
     <img class="h-30  rounded-lg cursor-pointer" [src]="categoryImages8[i]" style="max-height: 300px;margin-left:  78.5vw;margin-top: -44.5px">
     <figcaption class="mt-2 text-sm px-10 text-black dark:text-gray-400 cursor-pointer" style="margin-left:  79.5vw;white-space: nowrap;font-weight: bold;font-size: 20px">{{ category.name9 }}</figcaption>
   </div>
