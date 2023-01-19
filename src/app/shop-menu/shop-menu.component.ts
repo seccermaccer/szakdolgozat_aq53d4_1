@@ -8,12 +8,17 @@ import {AuthService} from "../shared/services/auth.service";
 })
 export class ShopMenuComponent implements OnInit {
   categories: any;
+  categoryImages: any;
+  categoryImages2: any;
+
 
   constructor(private authS: AuthService) { }
 
   ngOnInit(): void {
     this.authS.getCategories().subscribe(data => {
       this.categories = data;
+      this.categoryImages = this.categories.map((category: { imageUrl: any; }) => category.imageUrl);
+      this.categoryImages2 = this.categories.map((category: { imageUrl2: any; }) => category.imageUrl2);
     });
   }
 
