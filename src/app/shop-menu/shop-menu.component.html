@@ -1,4 +1,4 @@
-<div class="container" *ngFor="let category of categories">
+<!-- <div class="container" *ngFor="let category of categories">
   <a>{{ category.name1 }}</a>
   <a>{{ category.name2 }}</a>
   <a>{{ category.name3 }}</a>
@@ -6,4 +6,56 @@
   <a>{{ category.name5 }}</a>
   <a>{{ category.name6 }}</a>
   <a>{{ category.name8 }}</a>
+</div> -->
+
+
+
+
+<div  style="max-width: 300px">
+  <div *ngFor="let category of categories; let i = index">
+    <img class="h-30  rounded-lg" [src]="categoryImages[i]" style="max-height: 300px;margin-left: 100px">
+    <figcaption class="mt-2 text-sm px-10 text-gray-500 dark:text-gray-400" style="margin-left: 70px">{{ category.name1 }}</figcaption>
+  </div>
+
+  <div  *ngFor="let category of categories; let i = index" style="max-width: 300px">
+    <img class="h-30 max-w-max rounded-lg" [src]="categoryImages[i]" style="max-height: 300px;margin-left: 600px;margin-top: -64px">
+    <figcaption class="mt-2 text-sm px-10 text-gray-500 dark:text-gray-400" style="margin-left: 600px">{{ category.name1 }}</figcaption>
+  </div>
+
+  <div  *ngFor="let category of categories; let i = index" style="max-width: 300px">
+    <img class="h-30 max-w-max rounded-lg" [src]="categoryImages[i]" style="max-height: 300px;margin-left: 1130px;margin-top: -46px">
+    <figcaption class="mt-2 text-sm px-10 text-gray-500 dark:text-gray-400" style="margin-left: 1130px;max-width: 300px">{{ category.name1 }}</figcaption>
+  </div>
+
+  <div *ngFor="let category of categories; let i = index">
+    <img class="h-30  rounded-lg" [src]="categoryImages[i]" style="max-height: 300px;margin-left: 1600px;margin-top: -53px">
+    <figcaption class="mt-2 text-sm px-10 text-gray-500 dark:text-gray-400" style="margin-left:  1600px">{{ category.name1 }}</figcaption>
+  </div>
+
 </div>
+
+<div  style="max-width: 300px">
+  <div *ngFor="let category of categories; let i = index">
+    <img class="h-30  rounded-lg" [src]="categoryImages2[i]" style="max-height: 300px;margin-left: 100px">
+    <figcaption class="mt-2 text-sm px-10 text-gray-500 dark:text-gray-400" style="margin-left: 70px">{{ category.name6 }}</figcaption>
+  </div>
+
+  <div  *ngFor="let category of categories; let i = index" style="max-width: 300px">
+    <img class="h-30 max-w-max rounded-lg" [src]="categoryImages[i]" style="max-height: 300px;margin-left: 600px;margin-top: -64px">
+    <figcaption class="mt-2 text-sm px-10 text-gray-500 dark:text-gray-400" style="margin-left: 600px">{{ category.name1 }}</figcaption>
+  </div>
+
+  <div  *ngFor="let category of categories; let i = index" style="max-width: 300px">
+    <img class="h-30 max-w-max rounded-lg" [src]="categoryImages[i]" style="max-height: 300px;margin-left: 1130px;margin-top: -46px">
+    <figcaption class="mt-2 text-sm px-10 text-gray-500 dark:text-gray-400" style="margin-left: 1130px;max-width: 300px">{{ category.name1 }}</figcaption>
+  </div>
+
+  <div *ngFor="let category of categories; let i = index">
+    <img class="h-30  rounded-lg" [src]="categoryImages[i]" style="max-height: 300px;margin-left: 1600px;margin-top: -53px">
+    <figcaption class="mt-2 text-sm px-10 text-gray-500 dark:text-gray-400" style="margin-left:  1600px">{{ category.name1 }}</figcaption>
+  </div>
+
+</div>
+
+
+
