@@ -3,6 +3,7 @@ import {AngularFireAuth} from "@angular/fire/compat/auth";
 import {Router} from "@angular/router";
 import {Auth, authState, updateProfile, UserInfo} from "@angular/fire/auth";
 import {concatMap, Observable, of} from "rxjs";
+import {AngularFirestore} from "@angular/fire/compat/firestore";
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class AuthService {
 
   currentUser$ = authState(this.auth);
 
-  constructor(private authh: AngularFireAuth,private router: Router,private auth: Auth) { }
+  constructor(private authh: AngularFireAuth,private router: Router,private auth: Auth,private firestore: AngularFirestore) { }
 
   sendEmail(user: any) {
     user.sendEmailVerification();
@@ -52,4 +53,9 @@ export class AuthService {
       })
     );
   }
+
+  getCategories(): Observable<any> {
+    return this.firestore.collection('Categories').valueChanges();
+  }
+
 }
