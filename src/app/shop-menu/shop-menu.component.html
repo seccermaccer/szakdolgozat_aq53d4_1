@@ -17,37 +17,37 @@
     <figcaption class="mt-2 text-sm px-10 text-black dark:text-gray-400 cursor-pointer" style="margin-left: 6.6vw;white-space: nowrap;font-weight: bold;font-size: 20px">{{ category.name1 }}</figcaption>
   </div>
 
-  <div  *ngFor="let category of categories; let i = index" style="max-width: 300px">
-    <img class="h-30  rounded-lg" [src]="categoryImages3[i]" style="max-height: 300px;margin-left:29vw;margin-top: -268px">
-    <figcaption class="mt-2 text-sm px-10 text-black dark:text-gray-400" style="margin-left: 29vw;white-space: nowrap;font-weight: bold;font-size: 20px">{{ category.name5 }}</figcaption>
+  <div  *ngFor="let category of categories; let i = index" style="max-width: 300px" routerLink="/termekek" (click)="onClick(category.id)">
+    <img class="h-30  rounded-lg cursor-pointer" [src]="categoryImages3[i]" style="max-height: 300px;margin-left:29vw;margin-top: -268px">
+    <figcaption class="mt-2 text-sm px-10 text-black dark:text-gray-400  cursor-pointer" style="margin-left: 29vw;white-space: nowrap;font-weight: bold;font-size: 20px">{{ category.name5 }}</figcaption>
   </div>
 
-  <div  *ngFor="let category of categories; let i = index" style="max-width: 300px">
-    <img class="h-30 rounded-lg" [src]="categoryImages4[i]" style="max-height: 300px;margin-left: 52.5vw;margin-top: 788px">
-    <figcaption class="mt-2 text-sm px-10 text-black dark:text-gray-400" style="margin-left: 56vw;max-width: 300px;font-weight: bold;font-size: 20px">{{ category.name4 }}</figcaption>
+  <div  *ngFor="let category of categories; let i = index" style="max-width: 300px" routerLink="/termekek" (click)="onClick(category.id)">
+    <img class="h-30 rounded-lg cursor-pointer" [src]="categoryImages4[i]" style="max-height: 300px;margin-left: 52.5vw;margin-top: 788px">
+    <figcaption class="mt-2 text-sm px-10 text-black dark:text-gray-400 cursor-pointer" style="margin-left: 56vw;max-width: 300px;font-weight: bold;font-size: 20px">{{ category.name4 }}</figcaption>
   </div>
 
-  <div *ngFor="let category of categories; let i = index">
-    <img class="h-30  rounded-lg" [src]="categoryImages5[i]" style="max-height: 300px;margin-left: 78.5vw;margin-top:-1669px">
-    <figcaption class="mt-2 text-sm px-10 text-black dark:text-gray-400" style="margin-left:  80vw;font-weight: bold;font-size: 20px">{{ category.name3 }}</figcaption>
+  <div *ngFor="let category of categories; let i = index" routerLink="/termekek" (click)="onClick(category.id)">
+    <img class="h-30  rounded-lg cursor-pointer" [src]="categoryImages5[i]" style="max-height: 300px;margin-left: 78.5vw;margin-top:-1669px">
+    <figcaption class="mt-2 text-sm px-10 text-black dark:text-gray-400 cursor-pointer" style="margin-left:  80vw;font-weight: bold;font-size: 20px">{{ category.name3 }}</figcaption>
   </div>
 
 </div>
 
 <div  style="max-width: 300px">
-  <div *ngFor="let category of categories; let i = index">
-    <img class="h-30  rounded-lg" [src]="categoryImages2[i]" style="max-height: 300px;margin-left: 5.5vw;margin-top: 60px">
-    <figcaption class="mt-2 text-sm px-10 text-black dark:text-gray-400" style="margin-left: 6vw;white-space: nowrap;font-weight: bold;font-size: 20px">{{ category.name6 }}</figcaption>
+  <div *ngFor="let category of categories; let i = index" routerLink="/termekek" (click)="onClick(category.id)">
+    <img class="h-30  rounded-lg cursor-pointer" [src]="categoryImages2[i]" style="max-height: 300px;margin-left: 5.5vw;margin-top: 60px">
+    <figcaption class="mt-2 text-sm px-10 text-black dark:text-gray-400 cursor-pointer" style="margin-left: 6vw;white-space: nowrap;font-weight: bold;font-size: 20px">{{ category.name6 }}</figcaption>
   </div>
 
-  <div  *ngFor="let category of categories; let i = index" style="max-width: 300px">
-    <img class="h-30  rounded-lg" [src]="categoryImages6[i]" style="max-height: 300px;margin-left:29vw;margin-top: -86.5px">
-    <figcaption class="mt-2 text-sm px-10 text-black dark:text-gray-400" style="margin-left: 32.5vw;font-weight: bold;font-size: 20px">{{ category.name8 }}</figcaption>
+  <div  *ngFor="let category of categories; let i = index" style="max-width: 300px" routerLink="/termekek" (click)="onClick(category.id)">
+    <img class="h-30  rounded-lg cursor-pointer" [src]="categoryImages6[i]" style="max-height: 300px;margin-left:29vw;margin-top: -86.5px">
+    <figcaption class="mt-2 text-sm px-10 text-black dark:text-gray-400 cursor-pointer" style="margin-left: 32.5vw;font-weight: bold;font-size: 20px">{{ category.name8 }}</figcaption>
   </div>
 
-  <div  *ngFor="let category of categories; let i = index" style="max-width: 300px">
-    <img class="h-30 rounded-lg" [src]="categoryImages7[i]" style="max-height: 300px;margin-left: 52.5vw;margin-top:13.5px">
-    <figcaption class="mt-2 text-sm px-10 text-black dark:text-gray-400" style="margin-left: 53vw;max-width: 300px;white-space: nowrap;font-weight: bold;font-size: 20px">{{ category.name2 }}</figcaption>
+  <div  *ngFor="let category of categories; let i = index" style="max-width: 300px" routerLink="/termekek" (click)="onClick(category.id)">
+    <img class="h-30 rounded-lg cursor-pointer" [src]="categoryImages7[i]" style="max-height: 300px;margin-left: 52.5vw;margin-top:13.5px">
+    <figcaption class="mt-2 text-sm px-10 text-black dark:text-gray-400 cursor-pointer" style="margin-left: 53vw;max-width: 300px;white-space: nowrap;font-weight: bold;font-size: 20px">{{ category.name2 }}</figcaption>
   </div>
 
   <div *ngFor="let category of categories; let i = index" routerLink="/termekek"  (click)="onClick(category.id)">
