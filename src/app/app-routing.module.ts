@@ -8,7 +8,7 @@ const redirectToLogin = () => redirectUnauthorizedTo(['bejelentkezes']);
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '',
+    redirectTo: 'fooldal',
     pathMatch: 'full'
   },
   {
