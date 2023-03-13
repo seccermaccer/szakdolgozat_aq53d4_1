@@ -8,11 +8,30 @@ export class KosarService {
 
   constructor() { }
 
+  // addToCart(product: any, quantity: number) {
+  //   if (quantity !== undefined && quantity > 0) {
+  //     const item = { product, quantity };
+  //     this.cart.push(item);
+  //     item.product.mennyiseg += 1;
+  //     item.product.mennyiseg1 += 1;
+  //     item.product.mennyiseg2 += 1;
+  //   }else {
+  //     window.alert("Rossz mennyiséget adtál meg!")
+  //   }
+  // }
+
   addToCart(product: any, quantity: number) {
     if (quantity !== undefined && quantity > 0) {
-      const item = { product, quantity };
-      this.cart.push(item);
-    }else {
+      if (!this.isAlreadyInCart(product)) {
+        const item = { product, quantity };
+        this.cart.push(item);
+        item.product.mennyiseg += 1;
+        item.product.mennyiseg1 += 1;
+        item.product.mennyiseg2 += 1;
+      } else {
+        window.alert("Ez a termék már szerepel a kosárban!");
+      }
+    } else {
       window.alert("Rossz mennyiséget adtál meg!")
     }
   }
@@ -24,5 +43,9 @@ export class KosarService {
   clearCart() {
     this.cart = [];
     return this.cart;
+  }
+
+  private isAlreadyInCart(product: any): boolean {
+    return this.cart.some((item) => item.product.id2 === product.id2);
   }
 }
