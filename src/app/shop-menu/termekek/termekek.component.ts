@@ -18,18 +18,28 @@ export class TermekekComponent implements OnInit {
   products6: any[] | undefined;
   products7: any[] | undefined;
   products8: any[] | undefined;
+  products9: any[] | undefined;
+  products10: any[] | undefined;
   selectedProductId: number | undefined;
   showProducts: boolean | undefined;
   quantity: any = 0;
   cart: { product: any, quantity: number }[] = [];
   quantity1: any = 0;
-  quantity2: any;
+  quantity2: any = 0;
   cartItems: any[] = [];
 
   constructor(private termekService: TermekService,private productService: ProductService,private cartService: KosarService) { }
 
   ngOnInit() {
     this.termekService.getProductsByCategory("Számítógép alkatrész").subscribe(products => {
+      this.products9 = products;
+    });
+
+    this.termekService.getProductsByCategory("Számítógép alkatrész2").subscribe(products => {
+      this.products10 = products;
+    });
+
+    this.termekService.getProductsByCategory("Számítógép alkatrész1").subscribe(products => {
       this.products = products;
     });
 
