@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {KosarService} from "../shared/services/kosar.service";
 
 @Component({
   selector: 'app-kosar',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KosarComponent implements OnInit {
 
-  constructor() { }
+  cartItems: any[] = [];
+
+  constructor(private cartService: KosarService) { }
 
   ngOnInit(): void {
+    this.cartItems = this.cartService.getCart();
   }
 
 }

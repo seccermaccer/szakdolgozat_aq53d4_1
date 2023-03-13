@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {TermekService} from "../../shared/services/termek.service";
 import {ProductService} from "../../shared/services/product.service";
+import {KosarService} from "../../shared/services/kosar.service";
 
 @Component({
   selector: 'app-termekek',
@@ -19,8 +20,13 @@ export class TermekekComponent implements OnInit {
   products8: any[] | undefined;
   selectedProductId: number | undefined;
   showProducts: boolean | undefined;
+  quantity: any;
+  cart: { product: any, quantity: number }[] = [];
+  quantity1: any;
+  quantity2: any;
+  cartItems: any[] = [];
 
-  constructor(private termekService: TermekService,private productService: ProductService) { }
+  constructor(private termekService: TermekService,private productService: ProductService,private cartService: KosarService) { }
 
   ngOnInit() {
     this.termekService.getProductsByCategory("Számítógép alkatrész").subscribe(products => {
@@ -57,6 +63,11 @@ export class TermekekComponent implements OnInit {
 
     this.selectedProductId = this.productService.getSelectedProductId();
     this.showProducts = this.productService.getShowProducts();
+  }
+
+  addToCart(product: any, quantity: number) {
+    this.cartService.addToCart(product, quantity);
+    console.log("működik");
   }
 
 }
