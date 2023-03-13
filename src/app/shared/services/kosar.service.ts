@@ -25,9 +25,12 @@ export class KosarService {
       if (!this.isAlreadyInCart(product)) {
         const item = { product, quantity };
         this.cart.push(item);
-        item.product.mennyiseg += 1;
-        item.product.mennyiseg1 += 1;
-        item.product.mennyiseg2 += 1;
+        item.product.mennyiseg += quantity;
+        item.product.mennyiseg1 += quantity;
+        item.product.mennyiseg2 += quantity;
+        item.product.ar *= quantity;
+        item.product.ar1 *= quantity;
+        item.product.ar2 *= quantity;
       } else {
         window.alert("Ez a termék már szerepel a kosárban!");
       }
@@ -42,7 +45,6 @@ export class KosarService {
 
   clearCart() {
     this.cart = [];
-    return this.cart;
   }
 
   private isAlreadyInCart(product: any): boolean {

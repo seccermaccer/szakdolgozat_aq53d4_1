@@ -1,5 +1,21 @@
 <div *ngFor="let item of cartItems">
-  <p *ngIf="item.product.productName2">{{ item.product.productName2 }} - {{ item.product.mennyiseg1 }} darab - {{item.product.ar1}}</p>
-  <p *ngIf="item.product.productName1">{{ item.product.productName1 }} - {{ item.product.mennyiseg2 }} darab - {{item.product.ar}}</p>
-  <p *ngIf="item.product.productName3">{{ item.product.productName3 }} - {{ item.product.mennyiseg }} darab - {{item.product.ar2}}</p>
+  <p *ngIf="item.product.productName2">{{ item.product.productName2 }} - {{ item.product.mennyiseg1 }} darab - {{item.product.ar1}} Ft
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg1 = item.product.mennyiseg1 + 1; item.product.ar1 = item.product.ar1 + 19000">
+      +
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" (click)="item.product.mennyiseg1 = item.product.mennyiseg1 - 1; item.product.ar1 = item.product.ar1 - 19000">
+      -
+    </button>
+  </p>
+
+  <p *ngIf="item.product.productName1">{{ item.product.productName1 }} - {{ item.product.mennyiseg2 }} darab - {{item.product.ar}} Ft</p>
+  <p *ngIf="item.product.productName3">{{ item.product.productName3 }} - {{ item.product.mennyiseg }} darab - {{item.product.ar2}} Ft</p>
 </div>
+<button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+        type="button" (click)="clearCart()">
+  Összes törlése
+</button>

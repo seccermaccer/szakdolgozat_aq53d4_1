@@ -16,4 +16,12 @@ export class KosarComponent implements OnInit {
     this.cartItems = this.cartService.getCart();
   }
 
+  clearCart() {
+    if(confirm('Ez egy végleges funkció biztosan törölni szeretne mindent?')){
+      this.cartService.clearCart();
+      this.cartItems = [];
+    }
+  }
+
+
 }
