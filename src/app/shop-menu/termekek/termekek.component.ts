@@ -20,9 +20,9 @@ export class TermekekComponent implements OnInit {
   products8: any[] | undefined;
   selectedProductId: number | undefined;
   showProducts: boolean | undefined;
-  quantity: any;
+  quantity: any = 0;
   cart: { product: any, quantity: number }[] = [];
-  quantity1: any;
+  quantity1: any = 0;
   quantity2: any;
   cartItems: any[] = [];
 
