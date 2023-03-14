@@ -29,6 +29,11 @@ export class KosarComponent implements OnInit {
   removeFromCart(product: any) {
     this.cartService.removeFromCart(product);
     this.cartItems = this.cartService.getCart();
+    this.totalPrice = 0;
+  }
+
+  helper(){
+    this.totalPrice = 0;
   }
 
 
@@ -57,23 +62,26 @@ export class KosarComponent implements OnInit {
   // }
 
   getTotalPrice(): number {
+    if(this.totalPrice === 0){
     for(let item of this.cartItems) {
-      if(item.product.productName1) {
-        this.totalPrice +=  item.product.ar;
+        if(item.product.productName1) {
+          this.totalPrice +=  item.product.ar;
+        }
+        if(item.product.productName2) {
+          this.totalPrice += item.product.ar1;
+        }
+        if(item.product.productName3) {
+          this.totalPrice +=  item.product.ar2;
+        }
+        if(item.product.productName4) {
+          this.totalPrice += item.product.ar3;
+        }
+        if(item.product.productName5) {
+          this.totalPrice += item.product.ar4;
+        }
       }
-      if(item.product.productName2) {
-        this.totalPrice += item.product.ar1;
       }
-      if(item.product.productName3) {
-        this.totalPrice +=  item.product.ar2;
-      }
-      if(item.product.productName4) {
-        this.totalPrice += item.product.ar3;
-      }
-      if(item.product.productName5) {
-        this.totalPrice += item.product.ar4;
-      }
-    }
+
     return this.totalPrice;
   }
 

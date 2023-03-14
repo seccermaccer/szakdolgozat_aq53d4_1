@@ -2,12 +2,12 @@
   <p *ngIf="item.product.productName2">{{ item.product.productName2 }} - {{ item.product.mennyiseg1 }} darab - {{item.product.ar1}} Ft
     <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
   py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg1 = item.product.mennyiseg1 + 1; item.product.ar1 = item.product.ar1 + 44390">
+            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg1 = item.product.mennyiseg1 + 1; item.product.ar1 = item.product.ar1 + 44390;helper()">
       +
     </button>
     <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
   py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-            type="button" *ngIf="item.product.mennyiseg1 > 0" (click)="item.product.mennyiseg1 = item.product.mennyiseg1 - 1; item.product.ar1 = item.product.ar1 - 44390">
+            type="button" *ngIf="item.product.mennyiseg1 > 0" (click)="item.product.mennyiseg1 = item.product.mennyiseg1 - 1; item.product.ar1 = item.product.ar1 - 44390;helper()">
       -
     </button>
     <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
@@ -21,12 +21,12 @@
   <p *ngIf="item.product.productName1">{{ item.product.productName1 }} - {{ item.product.mennyiseg2 }} darab - {{item.product.ar}} Ft
     <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
   py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg2 = item.product.mennyiseg2 + 1; item.product.ar = item.product.ar + 40590">
+            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg2 = item.product.mennyiseg2 + 1; item.product.ar = item.product.ar + 40590;helper()">
       +
     </button>
     <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
   py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-            type="button" *ngIf="item.product.mennyiseg2 > 0" (click)="item.product.mennyiseg2 = item.product.mennyiseg2 - 1; item.product.ar = item.product.ar - 40590">
+            type="button" *ngIf="item.product.mennyiseg2 > 0" (click)="item.product.mennyiseg2 = item.product.mennyiseg2 - 1; item.product.ar = item.product.ar - 40590;helper()">
       -
     </button>
     <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
@@ -41,12 +41,12 @@
   <p *ngIf="item.product.productName3">{{ item.product.productName3 }} - {{ item.product.mennyiseg }} darab - {{item.product.ar2}} Ft
     <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
   py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg = item.product.mennyiseg + 1; item.product.ar2 = item.product.ar2 + 49990">
+            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg = item.product.mennyiseg + 1; item.product.ar2 = item.product.ar2 + 49990;helper()">
       +
     </button>
     <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
   py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-            type="button" *ngIf="item.product.mennyiseg > 0" (click)="item.product.mennyiseg = item.product.mennyiseg - 1; item.product.ar2 = item.product.ar2 - 49990">
+            type="button" *ngIf="item.product.mennyiseg > 0" (click)="item.product.mennyiseg = item.product.mennyiseg - 1; item.product.ar2 = item.product.ar2 - 49990;helper()">
       -
     </button>
     <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
@@ -58,12 +58,12 @@
   <p *ngIf="item.product.productName4">{{ item.product.productName4 }} - {{ item.product.mennyiseg3 }} darab - {{item.product.ar3}} Ft
     <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
   py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg3 = item.product.mennyiseg3 + 1; item.product.ar3 = item.product.ar3 + 103990">
+            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg3 = item.product.mennyiseg3 + 1; item.product.ar3 = item.product.ar3 + 103990;helper()">
       +
     </button>
     <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
   py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-            type="button" *ngIf="item.product.mennyiseg3 > 0" (click)="item.product.mennyiseg3 = item.product.mennyiseg3 - 1; item.product.ar3 = item.product.ar3 - 103990">
+            type="button" *ngIf="item.product.mennyiseg3 > 0" (click)="item.product.mennyiseg3 = item.product.mennyiseg3 - 1; item.product.ar3 = item.product.ar3 - 103990;helper()">
       -
     </button>
     <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
@@ -75,12 +75,12 @@
   <p *ngIf="item.product.productName5">{{ item.product.productName5 }} - {{ item.product.mennyiseg4 }} darab - {{item.product.ar4}} Ft
     <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
   py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg4 = item.product.mennyiseg4 + 1; item.product.ar4 = item.product.ar4 + 23890">
+            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg4 = item.product.mennyiseg4 + 1; item.product.ar4 = item.product.ar4 + 23890;helper()">
       +
     </button>
     <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
   py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-            type="button" *ngIf="item.product.mennyiseg4 > 0" (click)="item.product.mennyiseg4 = item.product.mennyiseg4 - 1; item.product.ar4 = item.product.ar4 - 23890">
+            type="button" *ngIf="item.product.mennyiseg4 > 0" (click)="item.product.mennyiseg4 = item.product.mennyiseg4 - 1; item.product.ar4 = item.product.ar4 - 23890;helper()">
       -
     </button>
     <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"

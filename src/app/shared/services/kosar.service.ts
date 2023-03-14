@@ -26,6 +26,9 @@ export class KosarService {
       if (!this.isAlreadyInCart(product)) {
         const item = { product, quantity };
         this.cart.push(item);
+
+        window.alert('Sikeresen beletetted a terméket a kosárba.')
+
         item.product.mennyiseg += quantity;
         item.product.mennyiseg1 += quantity;
         item.product.mennyiseg2 += quantity;
