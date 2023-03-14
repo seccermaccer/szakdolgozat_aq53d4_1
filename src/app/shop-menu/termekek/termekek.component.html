@@ -35,6 +35,18 @@
   </button>
 </div>
 
+<div *ngFor="let product of products11" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}">
+  <p>{{ product.productName4 }}</p>
+  <p>{{ product.leiras3 }}</p>
+  <p>{{ product.ar3 }} Ft</p>
+
+  <input type="number" [(ngModel)]="quantity3" min="0">
+  <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="button" (click)="addToCart(product, quantity3)">
+    Termék kosárba helyezése
+  </button>
+</div>
+
 <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 
 <div *ngFor="let product2 of products2" [ngStyle]="{'display': selectedProductId == product2.id ? 'block' : 'none'}">

@@ -28,9 +28,11 @@ export class KosarService {
         item.product.mennyiseg += quantity;
         item.product.mennyiseg1 += quantity;
         item.product.mennyiseg2 += quantity;
+        item.product.mennyiseg3 += quantity;
         item.product.ar *= quantity;
         item.product.ar1 *= quantity;
         item.product.ar2 *= quantity;
+        item.product.ar3 *= quantity;
       } else {
         window.alert("Ez a termék már szerepel a kosárban!");
       }

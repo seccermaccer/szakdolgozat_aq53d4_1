@@ -54,6 +54,23 @@
       Termék törlése
     </button>
   </p>
+
+  <p *ngIf="item.product.productName4">{{ item.product.productName4 }} - {{ item.product.mennyiseg3 }} darab - {{item.product.ar3}} Ft
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg3 = item.product.mennyiseg3 + 1; item.product.ar3 = item.product.ar3 + 103990">
+      +
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" *ngIf="item.product.mennyiseg3 > 0" (click)="item.product.mennyiseg3 = item.product.mennyiseg3 - 1; item.product.ar3 = item.product.ar3 - 103990">
+      -
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" >
+      Termék törlése
+    </button>
+  </p>
 </div>
 
 
