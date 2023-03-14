@@ -1,32 +1,42 @@
+<div *ngIf="user">
+  <form style="width: 600px;height: 300px;margin-left: 600px"   (ngSubmit)="addComment()" [formGroup]="commentsForm">
+    <div class="relative z-0 w-100 mb-6 group">
+      <input type="text" [(ngModel)]="user.name" formControlName="username" id="username" class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="username" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Felhasználónév</label>
+    </div>
+    <mat-error *ngIf="username?.errors?.['required']">
+      Felhasználónév megadása kötelező
+    </mat-error>
 
-<form style="width: 600px;height: 300px;margin-left: 600px" *ngIf="user">
-  <div class="relative z-0 w-100 mb-6 group">
-    <input type="text" [(ngModel)]="user.name" name="floating_email" id="floating_email" class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-    <label for="floating_email" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Felhasználónév</label>
-  </div>
-  <div class="relative z-0 w-full mb-6 group">
-    <input type="text" name="floating_password" id="termek" class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-    <label for="termek" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Termék neve</label>
-  </div>
-  <div class="relative z-0 w-full mb-6 group">
-    <input type="text" name="floating_password" id="floating_password" class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-    <label for="floating_password" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Komment</label>
-  </div>
+    <div class="relative z-0 w-full mb-6 group">
+      <input type="text" formControlName="productName" id="productName" class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="productName" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Termék neve</label>
+    </div>
+    <mat-error *ngIf="productName?.errors?.['required']">
+      Termék megadása kötelező
+    </mat-error>
 
-
-  <button mat-icon-button  *ngFor="let ratingId of ratingArr;index as i" [id]="'star_'+i" (click)="onClick(i+1)" [matTooltip]="(ratingId+1).toString()" matTooltipPosition="above">
-    <mat-icon>
-      {{showIcon(i)}}
-    </mat-icon>
-  </button>
-  <mat-error *ngIf="starCount == null || starCount == 0">
-    Star count is <strong>required</strong> and cannot be zero
-  </mat-error>
-  <p class="body-2">
-    Értékelésed <span class="body-2">{{rating}}</span> / <span class="body-2">{{starCount}}</span>
-  </p>
+    <div class="relative z-0 w-full mb-6 group">
+      <input type="text" formControlName="comment" id="comment" class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="comment" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Komment</label>
+    </div>
+    <mat-error *ngIf="comment?.errors?.['required']">
+      Komment megadása kötelező
+    </mat-error>
 
 
+    <label for="rating">Értékelés:</label>
+    <input type="range" id="rating" formControlName="rating" min="1" max="5">
+    <mat-error *ngIf="rating2?.errors?.['required']">
+      Értékelés megadása kötelező
+    </mat-error>
 
-  <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Elküldés</button>
-</form>
+
+
+
+    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Elküldés</button>
+  </form>
+
+</div>
+
+

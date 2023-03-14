@@ -7,21 +7,22 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {MatIconModule} from "@angular/material/icon";
 import {MatFormFieldModule} from "@angular/material/form-field";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
   declarations: [
     RatingComponent
   ],
-  imports: [
-    CommonModule,
-    RatingRoutingModule,
-    MatButtonModule,
-    MatTooltipModule,
-    MatIconModule,
-    MatFormFieldModule,
-    FormsModule
-  ]
+    imports: [
+        CommonModule,
+        RatingRoutingModule,
+        MatButtonModule,
+        MatTooltipModule,
+        MatIconModule,
+        MatFormFieldModule,
+        FormsModule,
+        ReactiveFormsModule
+    ]
 })
 export class RatingModule { }

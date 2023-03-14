@@ -1,6 +1,10 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {UserService} from "../shared/services/user.service";
 import {User} from "../shared/models/User";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {Router} from "@angular/router";
+import {Comment} from "../shared/models/Comment";
+import {CommentService} from "../shared/services/comment.service";
 
 @Component({
   selector: 'app-rating',
@@ -9,23 +13,21 @@ import {User} from "../shared/models/User";
 })
 export class RatingComponent implements OnInit {
 
-  @Input('rating') rating: number = 3;
-  @Input('starCount') starCount: number = 5;
-  @Input('color') private color: string = 'accent';
-  @Output() private ratingUpdated = new EventEmitter();
-
-  private snackBarDuration: number = 2000;
-  ratingArr = [];
-  private snackBar: any;
   user?: User;
 
-  constructor(private userS: UserService) { }
+  commentsForm = new FormGroup({
+    username: new FormControl('',Validators.required),
+    comment: new FormControl('',Validators.required),
+
+
+    productName: new FormControl('',Validators.required),
+
+    rating: new FormControl('',Validators.required),
+  })
+
+  constructor(private userS: UserService,private router: Router,private commentS: CommentService) { }
 
   ngOnInit(): void {
-    console.log("a "+this.starCount)
-    for (let index = 0; index < this.starCount; index++) {
-      this.ratingArr.push(<never>index);
-    }
 
     const user = JSON.parse(localStorage.getItem('user') as string) as firebase.default.User;
     this.userS.getById(user.uid).subscribe(data => {
@@ -35,30 +37,46 @@ export class RatingComponent implements OnInit {
     })
   }
 
-  onClick(rating:number) {
-    console.log(rating)
-    this.rating = rating; // a rating értékének frissítése
-    this.snackBar.open('Értékelésed ' + rating + ' / ' + this.starCount, '', {
-      duration: this.snackBarDuration
-    });
-    this.ratingUpdated.emit(rating);
-    return false;
+
+  get username(){
+    return this.commentsForm.get('username');
   }
 
+  get productName(){
+    return this.commentsForm.get('productName');
+  }
 
-  showIcon(index:number) {
-    if (this.rating >= index + 1) {
-      return 'star';
-    } else {
-      return 'star_border';
+  get comment(){
+    return this.commentsForm.get('comment');
+  }
+
+  get rating2(){
+    return this.commentsForm.get('rating');
+  }
+
+  addComment() {
+    if (this.commentsForm.valid) {
+      const username = this.commentsForm.get('username')?.value;
+      if (username && this.commentsForm.get('productName')?.value && this.commentsForm.get('comment')?.value && this.commentsForm.get('rating')?.value) {
+        const comment: Comment = {
+          username: <string>this.commentsForm.value.username,
+          productName: <string>this.commentsForm.value.productName,
+          comment: <string>this.commentsForm.value.comment,
+          rating: <number><unknown>this.commentsForm.value.rating,
+
+        };
+
+        this.commentS.create(comment).then(_ => {
+          window.alert("Sikeres véleményezés és értékelés");
+          this.router.navigate(['rating'])
+        }).catch(error => {
+          console.error(error)
+        });
+      }
     }
   }
 
-}
-export enum StarRatingColor {
-  primary = "primary",
-  accent = "accent",
-  warn = "warn"
+
 }
 
 
