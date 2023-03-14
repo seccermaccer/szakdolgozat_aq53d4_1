@@ -34,11 +34,17 @@ export class KosarService {
         item.product.mennyiseg2 += quantity;
         item.product.mennyiseg3 += quantity;
         item.product.mennyiseg4 += quantity;
+        item.product.mennyiseg5 += quantity;
+        item.product.mennyiseg6 += quantity;
+        item.product.mennyiseg7 += quantity;
         item.product.ar *= quantity;
         item.product.ar1 *= quantity;
         item.product.ar2 *= quantity;
         item.product.ar3 *= quantity;
         item.product.ar4 *= quantity;
+        item.product.ar5 *= quantity;
+        item.product.ar6 *= quantity;
+        item.product.ar7 *= quantity;
 
         this.totalPrice += item.product.ar+item.product.ar1+item.product.ar2+item.product.ar3+item.product.ar4
       } else {

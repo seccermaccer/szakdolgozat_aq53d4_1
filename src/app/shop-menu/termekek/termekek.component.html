@@ -100,10 +100,42 @@
   <p>{{ product.id }}</p>
 </div>
 
+<!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
 <div *ngFor="let product of products8" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}">
-  <p>{{ product.productName }}</p>
-  <p>{{ product.category }}</p>
-  <p>{{ product.id }}</p>
+  <p>{{ product.productName6 }}</p>
+  <p>{{ product.leiras5}}</p>
+  <p>{{ product.ar5 }} Ft</p>
+
+  <input type="number" [(ngModel)]="quantity5" min="0">
+  <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="button" (click)="addToCart(product, quantity5)">
+    Termék kosárba helyezése
+  </button>
+</div>
+
+<div *ngFor="let product of products13" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}">
+  <p>{{ product.productName7 }}</p>
+  <p>{{ product.leiras6}}</p>
+  <p>{{ product.ar6 }} Ft</p>
+
+  <input type="number" [(ngModel)]="quantity6" min="0">
+  <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="button" (click)="addToCart(product, quantity6)">
+    Termék kosárba helyezése
+  </button>
+</div>
+
+<div *ngFor="let product of products14" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}">
+  <p>{{ product.productName8 }}</p>
+  <p>{{ product.leiras7}}</p>
+  <p>{{ product.ar7 }} Ft</p>
+
+  <input type="number" [(ngModel)]="quantity7" min="0">
+  <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="button" (click)="addToCart(product, quantity7)">
+    Termék kosárba helyezése
+  </button>
 </div>
 
 

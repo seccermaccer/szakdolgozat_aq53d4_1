@@ -22,6 +22,8 @@ export class TermekekComponent implements OnInit {
   products10: any[] | undefined;
   products11: any[] | undefined;
   products12: any[] | undefined;
+  products13: any[] | undefined;
+  products14: any[] | undefined;
   selectedProductId: number | undefined;
   showProducts: boolean | undefined;
   quantity: any = 0;
@@ -31,6 +33,9 @@ export class TermekekComponent implements OnInit {
   cartItems: any[] = [];
   quantity3: any = 0;
   quantity4: any = 0;
+  quantity5: any = 0;
+  quantity6: any = 0;
+  quantity7: any = 0;
 
   constructor(private termekService: TermekService,private productService: ProductService,private cartService: KosarService) { }
 
@@ -81,6 +86,14 @@ export class TermekekComponent implements OnInit {
 
     this.termekService.getProductsByCategory8("Számítógép tartozékok").subscribe(products => {
       this.products8 = products;
+    });
+
+    this.termekService.getProductsByCategory8("Számítógép tartozékok1").subscribe(products => {
+      this.products13 = products;
+    });
+
+    this.termekService.getProductsByCategory8("Számítógép tartozékok2").subscribe(products => {
+      this.products14 = products;
     });
 
     this.selectedProductId = this.productService.getSelectedProductId();

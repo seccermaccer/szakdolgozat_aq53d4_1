@@ -88,7 +88,71 @@
       Termék törlése
     </button>
   </p>
+
+  <!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+  <p *ngIf="item.product.productName6">{{ item.product.productName6 }} - {{ item.product.mennyiseg5 }} darab - {{item.product.ar5}} Ft
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg5 = item.product.mennyiseg5 + 1; item.product.ar5 = item.product.ar5 + 3691;helper()">
+      +
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" *ngIf="item.product.mennyiseg5 > 0" (click)="item.product.mennyiseg5 = item.product.mennyiseg5 - 1; item.product.ar5 = item.product.ar5 - 3691;helper()">
+      -
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" (click)="removeFromCart(item.product)">
+      Termék törlése
+    </button>
+  </p>
+
+  <p *ngIf="item.product.productName7">{{ item.product.productName7 }} - {{ item.product.mennyiseg6 }} darab - {{item.product.ar6}} Ft
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg6 = item.product.mennyiseg6 + 1; item.product.ar6 = item.product.ar6 + 37390;helper()">
+      +
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" *ngIf="item.product.mennyiseg6 > 0" (click)="item.product.mennyiseg6 = item.product.mennyiseg6 - 1; item.product.ar6 = item.product.ar6 - 37390;helper()">
+      -
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" (click)="removeFromCart(item.product)">
+      Termék törlése
+    </button>
+  </p>
+
+
+  <p *ngIf="item.product.productName8">{{ item.product.productName8 }} - {{ item.product.mennyiseg7 }} darab - {{item.product.ar7}} Ft
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg7 = item.product.mennyiseg7 + 1; item.product.ar7 = item.product.ar7 + 9489;helper()">
+      +
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" *ngIf="item.product.mennyiseg7 > 0" (click)="item.product.mennyiseg7 = item.product.mennyiseg7 - 1; item.product.ar7 = item.product.ar7 - 9489;helper()">
+      -
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" (click)="removeFromCart(item.product)">
+      Termék törlése
+    </button>
+  </p>
+
 </div>
+
+
+
+
+
+
+
+
+<!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 
 
 <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"

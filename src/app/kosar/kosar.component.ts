@@ -79,6 +79,15 @@ export class KosarComponent implements OnInit {
         if(item.product.productName5) {
           this.totalPrice += item.product.ar4;
         }
+      if(item.product.productName6) {
+        this.totalPrice += item.product.ar5;
+      }
+      if(item.product.productName7) {
+        this.totalPrice += item.product.ar6;
+      }
+      if(item.product.productName8) {
+        this.totalPrice += item.product.ar7;
+      }
       }
       }
 
