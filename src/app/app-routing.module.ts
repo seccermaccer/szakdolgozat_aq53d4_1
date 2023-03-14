@@ -37,6 +37,7 @@ const routes: Routes = [
   { path: 'forgot-password', loadChildren: () => import('./forgot-password/forgot-password.module').then(m => m.ForgotPasswordModule) },
   { path: 'update-profile', loadChildren: () => import('./update-profile/update-profile.module').then(m => m.UpdateProfileModule),...canActivate(redirectToLogin) },
   { path: 'termekek', loadChildren: () => import('./shop-menu/termekek/termekek.module').then(m => m.TermekekModule) },
+  { path: 'rating', loadChildren: () => import('./rating/rating.module').then(m => m.RatingModule) },
   { path: '**',
     redirectTo: '/not-found'
   }
