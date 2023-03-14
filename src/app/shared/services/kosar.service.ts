@@ -52,4 +52,15 @@ export class KosarService {
   private isAlreadyInCart(product: any): boolean {
     return this.cart.some((item) => item.product.id2 === product.id2);
   }
+
+  removeFromCart(product: any) {
+    const existingItem = this.cart.find(item => item.product.id2 === product.id2);
+
+    if (existingItem) {
+
+
+        this.cart = this.cart.filter(item => item.product.id2 !== product.id2);
+
+    }
+  }
 }

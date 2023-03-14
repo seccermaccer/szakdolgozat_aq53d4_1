@@ -23,5 +23,10 @@ export class KosarComponent implements OnInit {
     }
   }
 
+  removeFromCart(product: any) {
+    this.cartService.removeFromCart(product);
+    this.cartItems = this.cartService.getCart();
+  }
+
 
 }
