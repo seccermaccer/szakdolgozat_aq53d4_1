@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class KosarService {
   cart: { product: any, quantity: number }[] = [];
+  totalPrice: number = 0;
 
   constructor() { }
 
@@ -35,6 +36,8 @@ export class KosarService {
         item.product.ar2 *= quantity;
         item.product.ar3 *= quantity;
         item.product.ar4 *= quantity;
+
+        this.totalPrice += item.product.ar+item.product.ar1+item.product.ar2+item.product.ar3+item.product.ar4
       } else {
         window.alert("Ez a termék már szerepel a kosárban!");
       }
@@ -49,6 +52,10 @@ export class KosarService {
 
   clearCart() {
     this.cart = [];
+  }
+
+  getTotalPrice(){
+    return this.totalPrice;
   }
 
   private isAlreadyInCart(product: any): boolean {

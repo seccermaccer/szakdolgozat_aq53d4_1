@@ -23,6 +23,7 @@ export class KosarComponent implements OnInit {
       this.cartService.clearCart();
       this.cartItems = [];
     }
+    this.totalPrice = 0;
   }
 
   removeFromCart(product: any) {
@@ -49,6 +50,31 @@ export class KosarComponent implements OnInit {
   //     if (item.product.productName4) {
   //       this.totalPrice += item.product.mennyiseg3 * item.product.ar3;
   //     }
+  //     if (item.product.productName5) {
+  //       this.totalPrice += item.product.mennyiseg4 * item.product.ar4;
+  //     }
   //   });
   // }
+
+  getTotalPrice(): number {
+    for(let item of this.cartItems) {
+      if(item.product.productName1) {
+        this.totalPrice +=  item.product.ar;
+      }
+      if(item.product.productName2) {
+        this.totalPrice += item.product.ar1;
+      }
+      if(item.product.productName3) {
+        this.totalPrice +=  item.product.ar2;
+      }
+      if(item.product.productName4) {
+        this.totalPrice += item.product.ar3;
+      }
+      if(item.product.productName5) {
+        this.totalPrice += item.product.ar4;
+      }
+    }
+    return this.totalPrice;
+  }
+
 }
