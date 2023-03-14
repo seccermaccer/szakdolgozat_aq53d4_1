@@ -24,6 +24,19 @@ export class TermekekComponent implements OnInit {
   products12: any[] | undefined;
   products13: any[] | undefined;
   products14: any[] | undefined;
+  products15: any[] | undefined;
+  products16: any[] | undefined;
+  products17: any[] | undefined;
+  products18: any[] | undefined;
+  products19: any[] | undefined;
+  products20: any[] | undefined;
+  products21: any[] | undefined;
+  products22: any[] | undefined;
+  products23: any[] | undefined;
+  products24: any[] | undefined;
+  products26: any[] | undefined;
+  products27: any[] | undefined;
+  products28: any[] | undefined;
   selectedProductId: number | undefined;
   showProducts: boolean | undefined;
   quantity: any = 0;
@@ -36,6 +49,25 @@ export class TermekekComponent implements OnInit {
   quantity5: any = 0;
   quantity6: any = 0;
   quantity7: any = 0;
+  quantity8: any = 0;
+  quantity9: any = 0;
+  quantity10: any = 0;
+  quantity11: any = 0;
+  quantity12: any = 0;
+  quantity13: any = 0;
+  quantity14: any = 0;
+  quantity15: any = 0;
+  quantity16: any = 0;
+  quantity17: any = 0;
+  quantity18: any = 0;
+  quantity19: any = 0;
+  quantity22: any = 0;
+  quantity23: any = 0;
+  quantity24: any = 0;
+  quantity25: any = 0;
+  quantity26: any = 0;
+  quantity27: any = 0;
+  quantity28: any = 0;
 
   constructor(private termekService: TermekService,private productService: ProductService,private cartService: KosarService) { }
 
@@ -64,24 +96,76 @@ export class TermekekComponent implements OnInit {
       this.products2 = products;
     });
 
+    this.termekService.getProductsByCategory2("Számítógép Periféria1").subscribe(products => {
+      this.products26 = products;
+    });
+
+    this.termekService.getProductsByCategory2("Számítógép Periféria2").subscribe(products => {
+      this.products27 = products;
+    });
+
+    this.termekService.getProductsByCategory2("Számítógép Periféria3").subscribe(products => {
+      this.products28 = products;
+    });
+
     this.termekService.getProductsByCategory3("Szórakoztató Elektronika").subscribe(products => {
       this.products3 = products;
+    });
+
+    this.termekService.getProductsByCategory3("Szórakoztató Elektronika1").subscribe(products => {
+      this.products23 = products;
+    });
+
+    this.termekService.getProductsByCategory3("Szórakoztató Elektronika2").subscribe(products => {
+      this.products24 = products;
     });
 
     this.termekService.getProductsByCategory4("TV,monitor").subscribe(products => {
       this.products4 = products;
     });
 
+    this.termekService.getProductsByCategory4("TV,monitor1").subscribe(products => {
+      this.products21 = products;
+    });
+
+    this.termekService.getProductsByCategory4("TV,monitor2").subscribe(products => {
+      this.products22 = products;
+    });
+
     this.termekService.getProductsByCategory5("Mobil,tablet,kamera").subscribe(products => {
       this.products5 = products;
+    });
+
+    this.termekService.getProductsByCategory5("Mobil,tablet,kamera1").subscribe(products => {
+      this.products19 = products;
+    });
+
+    this.termekService.getProductsByCategory5("Mobil,tablet,kamera2").subscribe(products => {
+      this.products20 = products;
     });
 
     this.termekService.getProductsByCategory6("Háztartási gép,eszköz").subscribe(products => {
       this.products6 = products;
     });
 
+    this.termekService.getProductsByCategory6("Háztartási gép,eszköz1").subscribe(products => {
+      this.products17 = products;
+    });
+
+    this.termekService.getProductsByCategory6("Háztartási gép,eszköz2").subscribe(products => {
+      this.products18 = products;
+    });
+
     this.termekService.getProductsByCategory7("Okosotthon").subscribe(products => {
       this.products7 = products;
+    });
+
+    this.termekService.getProductsByCategory7("Okosotthon1").subscribe(products => {
+      this.products15 = products;
+    });
+
+    this.termekService.getProductsByCategory7("Okosotthon2").subscribe(products => {
+      this.products16 = products;
     });
 
     this.termekService.getProductsByCategory8("Számítógép tartozékok").subscribe(products => {

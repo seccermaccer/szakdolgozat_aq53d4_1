@@ -143,6 +143,329 @@
     </button>
   </p>
 
+  <p *ngIf="item.product.productName9">{{ item.product.productName9 }} - {{ item.product.mennyiseg8 }} darab - {{item.product.ar8}} Ft
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg8 = item.product.mennyiseg8 + 1; item.product.ar8 = item.product.ar8 + 10690;helper()">
+      +
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" *ngIf="item.product.mennyiseg8 > 0" (click)="item.product.mennyiseg8 = item.product.mennyiseg8 - 1; item.product.ar8 = item.product.ar8 - 10690;helper()">
+      -
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" (click)="removeFromCart(item.product)">
+      Termék törlése
+    </button>
+  </p>
+
+  <p *ngIf="item.product.productName10">{{ item.product.productName10 }} - {{ item.product.mennyiseg9 }} darab - {{item.product.ar9}} Ft
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg9 = item.product.mennyiseg9 + 1; item.product.ar9 = item.product.ar9 + 11789;helper()">
+      +
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" *ngIf="item.product.mennyiseg9 > 0" (click)="item.product.mennyiseg9 = item.product.mennyiseg9 - 1; item.product.ar9 = item.product.ar9 - 11789;helper()">
+      -
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" (click)="removeFromCart(item.product)">
+      Termék törlése
+    </button>
+  </p>
+
+  <p *ngIf="item.product.productName11">{{ item.product.productName11 }} - {{ item.product.mennyiseg10 }} darab - {{item.product.ar10}} Ft
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg10 = item.product.mennyiseg10 + 1; item.product.ar10 = item.product.ar10 + 89999;helper()">
+      +
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" *ngIf="item.product.mennyiseg10 > 0" (click)="item.product.mennyiseg10 = item.product.mennyiseg10 - 1; item.product.ar10 = item.product.ar10 - 89999;helper()">
+      -
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" (click)="removeFromCart(item.product)">
+      Termék törlése
+    </button>
+  </p>
+
+  <p *ngIf="item.product.productName12">{{ item.product.productName12 }} - {{ item.product.mennyiseg11 }} darab - {{item.product.ar11}} Ft
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg11 = item.product.mennyiseg11 + 1; item.product.ar11 = item.product.ar11 + 28590;helper()">
+      +
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" *ngIf="item.product.mennyiseg11 > 0" (click)="item.product.mennyiseg11 = item.product.mennyiseg11 - 1; item.product.ar11 = item.product.ar11 - 28590;helper()">
+      -
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" (click)="removeFromCart(item.product)">
+      Termék törlése
+    </button>
+  </p>
+
+  <p *ngIf="item.product.productName13">{{ item.product.productName13 }} - {{ item.product.mennyiseg12 }} darab - {{item.product.ar12}} Ft
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg12 = item.product.mennyiseg12 + 1; item.product.ar12 = item.product.ar12 + 175390;helper()">
+      +
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" *ngIf="item.product.mennyiseg12 > 0" (click)="item.product.mennyiseg12 = item.product.mennyiseg12 - 1; item.product.ar12 = item.product.ar12 - 175390;helper()">
+      -
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" (click)="removeFromCart(item.product)">
+      Termék törlése
+    </button>
+  </p>
+
+  <p *ngIf="item.product.productName14">{{ item.product.productName14 }} - {{ item.product.mennyiseg13 }} darab - {{item.product.ar13}} Ft
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg13 = item.product.mennyiseg13 + 1; item.product.ar13 = item.product.ar13 + 152991;helper()">
+      +
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" *ngIf="item.product.mennyiseg13 > 0" (click)="item.product.mennyiseg13 = item.product.mennyiseg13 - 1; item.product.ar13 = item.product.ar13 - 152991;helper()">
+      -
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" (click)="removeFromCart(item.product)">
+      Termék törlése
+    </button>
+  </p>
+
+  <p *ngIf="item.product.productName15">{{ item.product.productName15 }} - {{ item.product.mennyiseg14 }} darab - {{item.product.ar14}} Ft
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg14 = item.product.mennyiseg14 + 1; item.product.ar14 = item.product.ar14 + 46490;helper()">
+      +
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" *ngIf="item.product.mennyiseg14 > 0" (click)="item.product.mennyiseg14 = item.product.mennyiseg14 - 1; item.product.ar14 = item.product.ar14 - 46490;helper()">
+      -
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" (click)="removeFromCart(item.product)">
+      Termék törlése
+    </button>
+  </p>
+
+  <p *ngIf="item.product.productName16">{{ item.product.productName16 }} - {{ item.product.mennyiseg15 }} darab - {{item.product.ar15}} Ft
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg15 = item.product.mennyiseg15 + 1; item.product.ar15 = item.product.ar15 + 66590;helper()">
+      +
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" *ngIf="item.product.mennyiseg15 > 0" (click)="item.product.mennyiseg15 = item.product.mennyiseg15 - 1; item.product.ar15 = item.product.ar15 - 66590;helper()">
+      -
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" (click)="removeFromCart(item.product)">
+      Termék törlése
+    </button>
+  </p>
+
+  <p *ngIf="item.product.productName17">{{ item.product.productName17 }} - {{ item.product.mennyiseg16 }} darab - {{item.product.ar16}} Ft
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg16 = item.product.mennyiseg16 + 1; item.product.ar16 = item.product.ar16 + 611190;helper()">
+      +
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" *ngIf="item.product.mennyiseg16 > 0" (click)="item.product.mennyiseg16 = item.product.mennyiseg16 - 1; item.product.ar16 = item.product.ar16 - 611190;helper()">
+      -
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" (click)="removeFromCart(item.product)">
+      Termék törlése
+    </button>
+  </p>
+
+  <p *ngIf="item.product.productName18">{{ item.product.productName18 }} - {{ item.product.mennyiseg17 }} darab - {{item.product.ar17}} Ft
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg17 = item.product.mennyiseg17 + 1; item.product.ar17 = item.product.ar17 + 152890;helper()">
+      +
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" *ngIf="item.product.mennyiseg17 > 0" (click)="item.product.mennyiseg17 = item.product.mennyiseg17 - 1; item.product.ar17 = item.product.ar17 - 152890;helper()">
+      -
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" (click)="removeFromCart(item.product)">
+      Termék törlése
+    </button>
+  </p>
+
+  <p *ngIf="item.product.productName19">{{ item.product.productName19 }} - {{ item.product.mennyiseg18 }} darab - {{item.product.ar18}} Ft
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg18 = item.product.mennyiseg18 + 1; item.product.ar18 = item.product.ar18 + 307990;helper()">
+      +
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" *ngIf="item.product.mennyiseg18 > 0" (click)="item.product.mennyiseg18 = item.product.mennyiseg18 - 1; item.product.ar18 = item.product.ar18 - 307990;helper()">
+      -
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" (click)="removeFromCart(item.product)">
+      Termék törlése
+    </button>
+  </p>
+
+  <p *ngIf="item.product.productName20">{{ item.product.productName20 }} - {{ item.product.mennyiseg19 }} darab - {{item.product.ar19}} Ft
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg19 = item.product.mennyiseg19 + 1; item.product.ar19 = item.product.ar19 + 174589;helper()">
+      +
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" *ngIf="item.product.mennyiseg19 > 0" (click)="item.product.mennyiseg19 = item.product.mennyiseg19 - 1; item.product.ar19 = item.product.ar19 - 174589;helper()">
+      -
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" (click)="removeFromCart(item.product)">
+      Termék törlése
+    </button>
+  </p>
+
+  <p *ngIf="item.product.productName21">{{ item.product.productName21 }} - {{ item.product.mennyiseg20 }} darab - {{item.product.ar20}} Ft
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg20 = item.product.mennyiseg20 + 1; item.product.ar20 = item.product.ar20 + 143490;helper()">
+      +
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" *ngIf="item.product.mennyiseg20 > 0" (click)="item.product.mennyiseg20 = item.product.mennyiseg20 - 1; item.product.ar20 = item.product.ar20 - 143490;helper()">
+      -
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" (click)="removeFromCart(item.product)">
+      Termék törlése
+    </button>
+  </p>
+
+  <p *ngIf="item.product.productName22">{{ item.product.productName22 }} - {{ item.product.mennyiseg21 }} darab - {{item.product.ar21}} Ft
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg21 = item.product.mennyiseg21 + 1; item.product.ar21 = item.product.ar21 + 25490;helper()">
+      +
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" *ngIf="item.product.mennyiseg21 > 0" (click)="item.product.mennyiseg21 = item.product.mennyiseg21 - 1; item.product.ar21 = item.product.ar21 - 25490;helper()">
+      -
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" (click)="removeFromCart(item.product)">
+      Termék törlése
+    </button>
+  </p>
+
+  <p *ngIf="item.product.productName23">{{ item.product.productName23 }} - {{ item.product.mennyiseg22 }} darab - {{item.product.ar22}} Ft
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg22 = item.product.mennyiseg22 + 1; item.product.ar22 = item.product.ar22 + 17990;helper()">
+      +
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" *ngIf="item.product.mennyiseg22 > 0" (click)="item.product.mennyiseg22 = item.product.mennyiseg22 - 1; item.product.ar22 = item.product.ar22 - 17990;helper()">
+      -
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" (click)="removeFromCart(item.product)">
+      Termék törlése
+    </button>
+  </p>
+
+  <p *ngIf="item.product.productName24">{{ item.product.productName24 }} - {{ item.product.mennyiseg23 }} darab - {{item.product.ar23}} Ft
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg23 = item.product.mennyiseg23 + 1; item.product.ar23 = item.product.ar23 + 31690;helper()">
+      +
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" *ngIf="item.product.mennyiseg23 > 0" (click)="item.product.mennyiseg23 = item.product.mennyiseg23 - 1; item.product.ar23 = item.product.ar23 - 31690;helper()">
+      -
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" (click)="removeFromCart(item.product)">
+      Termék törlése
+    </button>
+  </p>
+
+  <p *ngIf="item.product.productName25">{{ item.product.productName25 }} - {{ item.product.mennyiseg24 }} darab - {{item.product.ar24}} Ft
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg24 = item.product.mennyiseg24 + 1; item.product.ar24 = item.product.ar24 + 43190;helper()">
+      +
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" *ngIf="item.product.mennyiseg24 > 0" (click)="item.product.mennyiseg24 = item.product.mennyiseg24 - 1; item.product.ar24 = item.product.ar24 - 43190;helper()">
+      -
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" (click)="removeFromCart(item.product)">
+      Termék törlése
+    </button>
+  </p>
+
+  <p *ngIf="item.product.productName26">{{ item.product.productName26 }} - {{ item.product.mennyiseg25 }} darab - {{item.product.ar25}} Ft
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg25 = item.product.mennyiseg25 + 1; item.product.ar25 = item.product.ar25 + 23691;helper()">
+      +
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" *ngIf="item.product.mennyiseg25 > 0" (click)="item.product.mennyiseg25 = item.product.mennyiseg25 - 1; item.product.ar25 = item.product.ar25 - 23691;helper()">
+      -
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" (click)="removeFromCart(item.product)">
+      Termék törlése
+    </button>
+  </p>
+
+  <p *ngIf="item.product.productName27">{{ item.product.productName27 }} - {{ item.product.mennyiseg26 }} darab - {{item.product.ar26}} Ft
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" style="margin-left: 370px" (click)="item.product.mennyiseg26 = item.product.mennyiseg26 + 1; item.product.ar26 = item.product.ar26 + 17690;helper()">
+      +
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2
+  py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" *ngIf="item.product.mennyiseg26 > 0" (click)="item.product.mennyiseg26 = item.product.mennyiseg26 - 1; item.product.ar26 = item.product.ar26 - 17690;helper()">
+      -
+    </button>
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" (click)="removeFromCart(item.product)">
+      Termék törlése
+    </button>
+  </p>
+
 </div>
 
 

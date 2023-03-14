@@ -88,6 +88,63 @@ export class KosarComponent implements OnInit {
       if(item.product.productName8) {
         this.totalPrice += item.product.ar7;
       }
+      if(item.product.productName9) {
+        this.totalPrice += item.product.ar8;
+      }
+      if(item.product.productName10) {
+        this.totalPrice += item.product.ar9;
+      }
+      if(item.product.productName11) {
+        this.totalPrice += item.product.ar10;
+      }
+      if(item.product.productName12) {
+        this.totalPrice += item.product.ar11;
+      }
+      if(item.product.productName13) {
+        this.totalPrice += item.product.ar12;
+      }
+      if(item.product.productName14) {
+        this.totalPrice += item.product.ar13;
+      }
+      if(item.product.productName15) {
+        this.totalPrice += item.product.ar14;
+      }
+      if(item.product.productName16) {
+        this.totalPrice += item.product.ar15;
+      }
+      if(item.product.productName17) {
+        this.totalPrice += item.product.ar16;
+      }
+      if(item.product.productName18) {
+        this.totalPrice += item.product.ar17;
+      }
+      if(item.product.productName19) {
+        this.totalPrice += item.product.ar18;
+      }
+      if(item.product.productName20) {
+        this.totalPrice += item.product.ar19;
+      }
+      if(item.product.productName21) {
+        this.totalPrice += item.product.ar20;
+      }
+      if(item.product.productName22) {
+        this.totalPrice += item.product.ar21;
+      }
+      if(item.product.productName23) {
+        this.totalPrice += item.product.ar22;
+      }
+      if(item.product.productName24) {
+        this.totalPrice += item.product.ar23;
+      }
+      if(item.product.productName25) {
+        this.totalPrice += item.product.ar24;
+      }
+      if(item.product.productName26) {
+        this.totalPrice += item.product.ar25;
+      }
+      if(item.product.productName27) {
+        this.totalPrice += item.product.ar26;
+      }
       }
       }
 

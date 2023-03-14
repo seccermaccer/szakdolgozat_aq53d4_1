@@ -61,43 +61,242 @@
 
 <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 
-<div *ngFor="let product2 of products2" [ngStyle]="{'display': selectedProductId == product2.id ? 'block' : 'none'}">
-  <p>{{ product2.productName }}</p>
-  <p>{{ product2.productName3 }}</p>
-  <p>{{ product2.productName2 }}</p>
-  <p>{{ product2.category }}</p>
-  <p>{{ product2.id }}</p>
+<div *ngFor="let product of products2" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}">
+  <p>{{ product.productName24 }}</p>
+  <p>{{ product.leiras23 }}</p>
+  <p>{{ product.ar23 }} Ft</p>
+
+  <input type="number" [(ngModel)]="quantity25" min="0">
+  <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="button" (click)="addToCart(product, quantity25)">
+    Termék kosárba helyezése
+  </button>
 </div>
+
+<div *ngFor="let product of products26" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}">
+  <p>{{ product.productName25 }}</p>
+  <p>{{ product.leiras24 }}</p>
+  <p>{{ product.ar24 }} Ft</p>
+
+  <input type="number" [(ngModel)]="quantity26" min="0">
+  <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="button" (click)="addToCart(product, quantity26)">
+    Termék kosárba helyezése
+  </button>
+</div>
+
+<div *ngFor="let product of products27" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}">
+  <p>{{ product.productName26 }}</p>
+  <p>{{ product.leiras25 }}</p>
+  <p>{{ product.ar25 }} Ft</p>
+
+  <input type="number" [(ngModel)]="quantity27" min="0">
+  <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="button" (click)="addToCart(product, quantity27)">
+    Termék kosárba helyezése
+  </button>
+</div>
+
+<div *ngFor="let product of products28" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}">
+  <p>{{ product.productName27 }}</p>
+  <p>{{ product.leiras26 }}</p>
+  <p>{{ product.ar26 }} Ft</p>
+
+  <input type="number" [(ngModel)]="quantity28" min="0">
+  <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="button" (click)="addToCart(product, quantity28)">
+    Termék kosárba helyezése
+  </button>
+</div>
+
+<!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 
 <div *ngFor="let product of products3" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}">
-  <p>{{ product.productName }}</p>
-  <p>{{ product.category }}</p>
-  <p>{{ product.id }}</p>
+  <p>{{ product.productName21 }}</p>
+  <p>{{ product.leiras20 }}</p>
+  <p>{{ product.ar20 }} Ft</p>
+
+  <input type="number" [(ngModel)]="quantity22" min="0">
+  <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="button" (click)="addToCart(product, quantity22)">
+    Termék kosárba helyezése
+  </button>
 </div>
+
+<div *ngFor="let product of products23" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}">
+  <p>{{ product.productName22 }}</p>
+  <p>{{ product.leiras21 }}</p>
+  <p>{{ product.ar21 }} Ft</p>
+
+  <input type="number" [(ngModel)]="quantity23" min="0">
+  <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="button" (click)="addToCart(product, quantity23)">
+    Termék kosárba helyezése
+  </button>
+</div>
+
+<div *ngFor="let product of products24" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}">
+  <p>{{ product.productName23 }}</p>
+  <p>{{ product.leiras22 }}</p>
+  <p>{{ product.ar22 }} Ft</p>
+
+  <input type="number" [(ngModel)]="quantity24" min="0">
+  <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="button" (click)="addToCart(product, quantity24)">
+    Termék kosárba helyezése
+  </button>
+</div>
+
+<!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 
 <div *ngFor="let product of products4" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}">
-  <p>{{ product.productName }}</p>
-  <p>{{ product.category }}</p>
-  <p>{{ product.id }}</p>
+  <p>{{ product.productName18 }}</p>
+  <p>{{ product.leiras17 }}</p>
+  <p>{{ product.ar17 }} Ft</p>
+
+  <input type="number" [(ngModel)]="quantity17" min="0">
+  <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="button" (click)="addToCart(product, quantity17)">
+    Termék kosárba helyezése
+  </button>
 </div>
 
+<div *ngFor="let product of products21" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}">
+  <p>{{ product.productName19 }}</p>
+  <p>{{ product.leiras18 }}</p>
+  <p>{{ product.ar18 }} Ft</p>
+
+  <input type="number" [(ngModel)]="quantity18" min="0">
+  <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="button" (click)="addToCart(product, quantity18)">
+    Termék kosárba helyezése
+  </button>
+</div>
+
+<div *ngFor="let product of products22" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}">
+  <p>{{ product.productName20 }}</p>
+  <p>{{ product.leiras19 }}</p>
+  <p>{{ product.ar19 }} Ft</p>
+
+  <input type="number" [(ngModel)]="quantity19" min="0">
+  <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="button" (click)="addToCart(product, quantity19)">
+    Termék kosárba helyezése
+  </button>
+</div>
+
+<!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 
 <div *ngFor="let product of products5" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}">
-  <p>{{ product.productName }}</p>
-  <p>{{ product.category }}</p>
-  <p>{{ product.id }}</p>
+  <p>{{ product.productName15 }}</p>
+  <p>{{ product.leiras14 }}</p>
+  <p>{{ product.ar14 }} Ft</p>
+
+  <input type="number" [(ngModel)]="quantity14" min="0">
+  <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="button" (click)="addToCart(product, quantity14)">
+    Termék kosárba helyezése
+  </button>
 </div>
+
+<div *ngFor="let product of products19" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}">
+  <p>{{ product.productName16 }}</p>
+  <p>{{ product.leiras15 }}</p>
+  <p>{{ product.ar15 }} Ft</p>
+
+  <input type="number" [(ngModel)]="quantity15" min="0">
+  <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="button" (click)="addToCart(product, quantity15)">
+    Termék kosárba helyezése
+  </button>
+</div>
+
+<div *ngFor="let product of products20" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}">
+  <p>{{ product.productName17 }}</p>
+  <p>{{ product.leiras16 }}</p>
+  <p>{{ product.ar16 }} Ft</p>
+
+  <input type="number" [(ngModel)]="quantity16" min="0">
+  <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="button" (click)="addToCart(product, quantity16)">
+    Termék kosárba helyezése
+  </button>
+</div>
+
+<!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 
 <div *ngFor="let product of products6" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}">
-  <p>{{ product.productName }}</p>
-  <p>{{ product.category }}</p>
-  <p>{{ product.id }}</p>
+  <p>{{ product.productName12 }}</p>
+  <p>{{ product.leiras11 }}</p>
+  <p>{{ product.ar11 }} Ft</p>
+
+  <input type="number" [(ngModel)]="quantity11" min="0">
+  <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="button" (click)="addToCart(product, quantity11)">
+    Termék kosárba helyezése
+  </button>
 </div>
 
+<div *ngFor="let product of products17" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}">
+  <p>{{ product.productName13 }}</p>
+  <p>{{ product.leiras12 }}</p>
+  <p>{{ product.ar12 }} Ft</p>
+
+  <input type="number" [(ngModel)]="quantity12" min="0">
+  <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="button" (click)="addToCart(product, quantity12)">
+    Termék kosárba helyezése
+  </button>
+</div>
+
+<div *ngFor="let product of products18" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}">
+  <p>{{ product.productName14 }}</p>
+  <p>{{ product.leiras13 }}</p>
+  <p>{{ product.ar13 }} Ft</p>
+
+  <input type="number" [(ngModel)]="quantity13" min="0">
+  <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="button" (click)="addToCart(product, quantity13)">
+    Termék kosárba helyezése
+  </button>
+</div>
+
+<!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
 <div *ngFor="let product of products7" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}">
-  <p>{{ product.productName }}</p>
-  <p>{{ product.category }}</p>
-  <p>{{ product.id }}</p>
+  <p>{{ product.productName9 }}</p>
+  <p>{{ product.leiras8 }}</p>
+  <p>{{ product.ar8 }} Ft</p>
+
+  <input type="number" [(ngModel)]="quantity8" min="0">
+  <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="button" (click)="addToCart(product, quantity8)">
+    Termék kosárba helyezése
+  </button>
+</div>
+
+<div *ngFor="let product of products15" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}">
+  <p>{{ product.productName10 }}</p>
+  <p>{{ product.leiras9 }}</p>
+  <p>{{ product.ar9 }} Ft</p>
+
+  <input type="number" [(ngModel)]="quantity9" min="0">
+  <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="button" (click)="addToCart(product, quantity9)">
+    Termék kosárba helyezése
+  </button>
+</div>
+
+<div *ngFor="let product of products16" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}">
+  <p>{{ product.productName11 }}</p>
+  <p>{{ product.leiras10 }}</p>
+  <p>{{ product.ar10 }} Ft</p>
+
+  <input type="number" [(ngModel)]="quantity10" min="0">
+  <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="button" (click)="addToCart(product, quantity10)">
+    Termék kosárba helyezése
+  </button>
 </div>
 
 <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
