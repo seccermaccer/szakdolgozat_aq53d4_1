@@ -88,4 +88,8 @@ export class CommentService {
     }
   }
 
+  getCommentById(id: string){
+    return this.afs.collection<Comment>(this.collectionName).doc(id).valueChanges();
+  }
+
 }

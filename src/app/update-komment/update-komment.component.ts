@@ -3,6 +3,7 @@ import {CommentService} from "../shared/services/comment.service";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {User} from "../shared/models/User";
 import {Comment} from "../shared/models/Comment";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-update-komment',
@@ -24,13 +25,13 @@ export class UpdateKommentComponent implements OnInit {
     rating: new FormControl('',Validators.required),
   })
 
-  constructor(private commentS: CommentService) { }
+  constructor(private commentS: CommentService,private router: Router) { }
 
   ngOnInit(): void {
-    const originalCommentId = this.comment?.id;
-    const previousComments = JSON.parse(localStorage.getItem('comments') || '[]') as Comment[];
+    let originalCommentId = this.comment?.id;
+    let previousComments = JSON.parse(localStorage.getItem('comments') || '[]') as Comment[];
     // const comment = previousComments[previousComments.length - 1];
-    const childComment = previousComments.find(comment => comment.id === originalCommentId);
+    let childComment = previousComments.find(comment => comment.id === originalCommentId);
     this.comment = childComment;
   }
 
@@ -52,6 +53,8 @@ export class UpdateKommentComponent implements OnInit {
 
   updateComment(comment: Comment) {
     this.commentS.update(comment);
+    window.alert("Sikeres komment megváltoztatás!")
+    this.router.navigate(['sajat-komment'])
   }
 
 }

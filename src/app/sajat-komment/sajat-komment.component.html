@@ -1,15 +1,14 @@
-<div *ngIf="user">
+<div *ngIf="user && comment2">
   <h2>Welcome, {{ user.username }}!</h2>
   <p>Here are your comments:</p>
   <ul>
-    <li *ngFor="let comment of comments">
-
+    <li *ngFor="let comment of comments; let i = index">
       <p><strong>Felhasználónév:</strong> {{ comment.username }}</p>
       <p><strong>Termék neve:</strong> {{ comment.productName }}</p>
       <p><strong>Komment:</strong> {{ comment.comment }}</p>
       <p><strong>Értékelés:</strong> {{ comment.rating }}</p>
       <button *ngIf="comment.username === user.username" (click)="deleteComment(comment.id)">Törlés</button>
-      <button routerLink="/update-komment"  (click)="updateComment2(comment.id)">Update</button>
+      <button routerLink="/update-komment" (click)="updateComment2(comment.id, i)">Update</button>
     </li>
   </ul>
 </div>

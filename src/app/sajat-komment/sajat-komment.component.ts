@@ -13,6 +13,7 @@ export class SajatKommentComponent implements OnInit {
 
   user?: User;
   comments: Comment[] = [];
+  comment2?: Comment;
 
   constructor(private commentS: CommentService,private userS: UserService) { }
 
@@ -29,6 +30,12 @@ export class SajatKommentComponent implements OnInit {
     },error => {
       console.error(error);
     })
+
+    let originalCommentId = this.comment2?.id;
+    let previousComments = JSON.parse(localStorage.getItem('comments') || '[]') as Comment[];
+    // const comment = previousComments[previousComments.length - 1];
+    let childComment = previousComments.find(comment => comment.id === originalCommentId);
+    this.comment2 = childComment;
   }
 
   deleteComment(commentId: string | undefined) {
@@ -37,9 +44,9 @@ export class SajatKommentComponent implements OnInit {
     this.commentS.delete(<string>commentId);
   }
 
-  updateComment2(commentId: string | undefined) {
-    const index = this.comments.findIndex(comment => comment.id === commentId);
-    this.comments.splice(index, 1);
+  updateComment2(commentId: string | undefined, index: number) {
+    this.comments[index] = { ...this.comments[index], id: commentId };
+    // update the comment using the commentId and the index
   }
 
 

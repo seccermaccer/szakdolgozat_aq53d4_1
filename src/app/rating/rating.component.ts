@@ -79,6 +79,7 @@ export class RatingComponent implements OnInit {
           this.router.navigate(['rating'])
         }).catch(error => {
           console.error(error)
+          window.alert(error);
         });
       }
     }
