@@ -38,6 +38,8 @@ const routes: Routes = [
   { path: 'update-profile', loadChildren: () => import('./update-profile/update-profile.module').then(m => m.UpdateProfileModule),...canActivate(redirectToLogin) },
   { path: 'termekek', loadChildren: () => import('./shop-menu/termekek/termekek.module').then(m => m.TermekekModule) },
   { path: 'rating', loadChildren: () => import('./rating/rating.module').then(m => m.RatingModule) },
+  { path: 'kommentek', loadChildren: () => import('./kommentek/kommentek.module').then(m => m.KommentekModule) },
+  { path: 'sajat-komment', loadChildren: () => import('./sajat-komment/sajat-komment.module').then(m => m.SajatKommentModule) },
   { path: '**',
     redirectTo: '/not-found'
   }
