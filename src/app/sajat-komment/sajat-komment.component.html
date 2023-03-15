@@ -1,1 +1,14 @@
-<p>sajat-komment works!</p>
+<div *ngIf="user">
+  <h2>Welcome, {{ user.username }}!</h2>
+  <p>Here are your comments:</p>
+  <ul>
+    <li *ngFor="let comment of comments">
+
+      <p><strong>Felhasználónév:</strong> {{ comment.username }}</p>
+      <p><strong>Termék neve:</strong> {{ comment.productName }}</p>
+      <p><strong>Komment:</strong> {{ comment.comment }}</p>
+      <p><strong>Értékelés:</strong> {{ comment.rating }}</p>
+      <button *ngIf="comment.username === user.username" (click)="deleteComment(comment.id)">Törlés</button>
+    </li>
+  </ul>
+</div>

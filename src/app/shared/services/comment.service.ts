@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {AngularFirestore} from "@angular/fire/compat/firestore";
 import {Comment} from "../models/Comment";
+import {User} from "../models/User";
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,8 @@ export class CommentService {
 
   collectionName = 'Comments';
   productsCollectionName = 'Products';
+
+  user?: User;
 
   constructor(private afs: AngularFirestore) { }
 
@@ -70,7 +73,19 @@ export class CommentService {
 
   }
 
-  delete(){
-
+  delete(id: string){
+    return this.afs.collection<Comment>(this.collectionName).doc(id).delete();
   }
+
+
+
+  async getCommentsByUser(userId: string): Promise<Comment[]> {
+    const snapshot = await this.afs.collection<Comment>(this.collectionName, ref => ref.where('username', '==', userId)).get().toPromise();
+    if (snapshot?.docs) {
+      return snapshot.docs.map(doc => doc.data());
+    } else {
+      return [];
+    }
+  }
+
 }
