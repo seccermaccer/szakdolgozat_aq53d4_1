@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {TermekService} from "../../shared/services/termek.service";
 import {ProductService} from "../../shared/services/product.service";
 import {KosarService} from "../../shared/services/kosar.service";
+import {RatingService} from "../../shared/services/rating.service";
 
 @Component({
   selector: 'app-termekek',
@@ -68,8 +69,19 @@ export class TermekekComponent implements OnInit {
   quantity26: any = 0;
   quantity27: any = 0;
   quantity28: any = 0;
+  rate: number = 0;
+  rate2: number = 0;
+  rate3: number = 0;
+  rate4: number = 0;
+  rate5: number = 0;
+  rate6: number = 0;
+  rate7: number = 0;
+  rate8: number = 0;
+  rate11: number = 0;
+  rate9: number = 0;
+  rate10: number = 0;
 
-  constructor(private termekService: TermekService,private productService: ProductService,private cartService: KosarService) { }
+  constructor(private termekService: TermekService,private productService: ProductService,private cartService: KosarService,private rating: RatingService) { }
 
   ngOnInit() {
     this.termekService.getProductsByCategory("Számítógép alkatrész").subscribe(products => {
@@ -182,11 +194,30 @@ export class TermekekComponent implements OnInit {
 
     this.selectedProductId = this.productService.getSelectedProductId();
     this.showProducts = this.productService.getShowProducts();
+
+    this.rating.getAverageRating('ugfsugzfdshuiogdfshis').subscribe(rater =>
+    {
+      console.log(rater)
+      this.rate = rater;
+    },error => {
+      console.error(error)
+    })
+
+    this.rating.getAverageRating('asdasdasd').subscribe(rater =>
+    {
+      console.log(rater)
+      this.rate2 = rater;
+    },error => {
+      console.error(error)
+    })
+
   }
 
   addToCart(product: any, quantity: number) {
     this.cartService.addToCart(product, quantity);
     console.log("működik");
   }
+
+
 
 }
