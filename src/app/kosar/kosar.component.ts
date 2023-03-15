@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import {KosarService} from "../shared/services/kosar.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-kosar',
@@ -12,7 +13,7 @@ export class KosarComponent implements OnInit {
 
   totalPrice: number = 0;
 
-  constructor(private cartService: KosarService) { }
+  constructor(private cartService: KosarService,public router: Router) { }
 
   ngOnInit(): void {
     this.cartItems = this.cartService.getCart();
@@ -62,6 +63,8 @@ export class KosarComponent implements OnInit {
   // }
 
   getTotalPrice(): number {
+
+
     if(this.totalPrice === 0){
     for(let item of this.cartItems) {
         if(item.product.productName1) {
@@ -148,7 +151,14 @@ export class KosarComponent implements OnInit {
       }
       }
 
+    this.totalPriceEmitter.emit(this.totalPrice);
+
+
     return this.totalPrice;
+
+
   }
+
+  @Output() totalPriceEmitter = new EventEmitter<number>();
 
 }

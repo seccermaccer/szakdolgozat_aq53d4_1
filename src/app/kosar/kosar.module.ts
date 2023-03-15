@@ -9,6 +9,9 @@ import {KosarComponent} from "./kosar.component";
   declarations: [
     KosarComponent
   ],
+  exports: [
+    KosarComponent
+  ],
   imports: [
     CommonModule,
     KosarRoutingModule
