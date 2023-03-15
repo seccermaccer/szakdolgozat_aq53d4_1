@@ -66,6 +66,14 @@ export class RatingComponent implements OnInit {
 
         };
 
+        const previousComments = JSON.parse(localStorage.getItem('comments') || '[]') as Comment[];
+
+        // Adjuk hozzá az új kommentet a korábbiakhoz
+        previousComments.push(comment);
+
+        // Mentsük el az összes kommentet a local storage-ba
+        localStorage.setItem('comments', JSON.stringify(previousComments));
+
         this.commentS.create(comment).then(_ => {
           window.alert("Sikeres véleményezés és értékelés");
           this.router.navigate(['rating'])

@@ -40,6 +40,7 @@ const routes: Routes = [
   { path: 'rating', loadChildren: () => import('./rating/rating.module').then(m => m.RatingModule) },
   { path: 'kommentek', loadChildren: () => import('./kommentek/kommentek.module').then(m => m.KommentekModule) },
   { path: 'sajat-komment', loadChildren: () => import('./sajat-komment/sajat-komment.module').then(m => m.SajatKommentModule) },
+  { path: 'update-komment', loadChildren: () => import('./update-komment/update-komment.module').then(m => m.UpdateKommentModule) },
   { path: '**',
     redirectTo: '/not-found'
   }

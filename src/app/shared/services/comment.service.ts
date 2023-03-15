@@ -69,8 +69,8 @@ export class CommentService {
     return this.afs.collection<Comment>(this.collectionName).valueChanges();
   }
 
-  update(){
-
+  update(comment: Comment){
+    return this.afs.collection<Comment>(this.collectionName).doc(comment.id).set(comment);
   }
 
   delete(id: string){

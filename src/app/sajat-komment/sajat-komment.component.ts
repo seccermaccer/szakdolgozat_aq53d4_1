@@ -37,5 +37,10 @@ export class SajatKommentComponent implements OnInit {
     this.commentS.delete(<string>commentId);
   }
 
+  updateComment2(commentId: string | undefined) {
+    const index = this.comments.findIndex(comment => comment.id === commentId);
+    this.comments.splice(index, 1);
+  }
+
 
 }
