@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {SearchService} from "../shared/services/search.service";
+import {KosarService} from "../shared/services/kosar.service";
 
 @Component({
   selector: 'app-kereses',
@@ -37,8 +38,36 @@ export class KeresesComponent implements OnInit {
   products25: any[] | undefined;
   products26: any[] | undefined;
   products27: any[] | undefined;
+  quantity: number = 0;
+  quantity1: any = 0;
+  quantity2: any = 0;
+  cartItems: any[] = [];
+  quantity3: any = 0;
+  quantity4: any = 0;
+  quantity5: any = 0;
+  quantity6: any = 0;
+  quantity7: any = 0;
+  quantity8: any = 0;
+  quantity9: any = 0;
+  quantity10: any = 0;
+  quantity11: any = 0;
+  quantity12: any = 0;
+  quantity13: any = 0;
+  quantity14: any = 0;
+  quantity15: any = 0;
+  quantity16: any = 0;
+  quantity17: any = 0;
+  quantity18: any = 0;
+  quantity19: any = 0;
+  quantity22: any = 0;
+  quantity23: any = 0;
+  quantity24: any = 0;
+  quantity25: any = 0;
+  quantity26: any = 0;
+  quantity27: any = 0;
+  quantity28: any = 0;
 
-  constructor(private route: ActivatedRoute,private keresesS: SearchService) {
+  constructor(private route: ActivatedRoute,private keresesS: SearchService,private cartService: KosarService) {
     this.route.queryParams.subscribe(params => {
       const searchText = params['q'];
       this.keresesS.searchProducts(searchText)
@@ -186,6 +215,11 @@ export class KeresesComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  addToCart(product: any, quantity: number) {
+    this.cartService.addToCart(product, quantity);
+    console.log("működik");
   }
 
 }
