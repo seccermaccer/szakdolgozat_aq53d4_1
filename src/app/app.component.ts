@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from "./shared/services/auth.service";
 import {Router} from "@angular/router";
+import {SearchService} from "./shared/services/search.service";
 
 @Component({
   selector: 'app-root',
@@ -9,8 +10,11 @@ import {Router} from "@angular/router";
 })
 export class AppComponent implements  OnInit{
   loggedInUser?: firebase.default.User | null;
+  searchTerm!: string;
+  products: any[] | undefined;
+  searchText: string | undefined;
 
-  constructor(public authService: AuthService,private router: Router) {
+  constructor(public authService: AuthService,private router: Router,private keresesS: SearchService) {
   }
 
   ngOnInit(): void {
@@ -32,5 +36,26 @@ export class AppComponent implements  OnInit{
     }).catch(error => {
       console.error(error);
     });
+  }
+
+  // search() {
+  //   this.keresesS.getProducts().subscribe((products) => {
+  //     this.products = products.filter((product: { productName15: string; }) => {
+  //       this.router.navigate(['/kereses'], { queryParams: { q: this.searchTerm } });
+  //       return product.productName15.toLowerCase().includes(this.searchTerm.toLowerCase());
+  //
+  //     });
+  //   });
+  //
+  //
+  // }
+
+  search() {
+    this.keresesS.searchProducts('AGFAPHOTO Realimove CC2700 videókamera')
+      .subscribe((data) => {
+        this.products = data;
+        console.log(data)
+        this.router.navigate(['/kereses'], { queryParams: { q: this.searchText } });
+      });
   }
 }

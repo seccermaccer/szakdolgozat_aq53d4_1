@@ -17,6 +17,7 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
 import {MatIconModule} from "@angular/material/icon";
 import {MatMenuModule} from "@angular/material/menu";
 import {AngularFireModule} from "@angular/fire/compat";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -27,18 +28,19 @@ import {AngularFireModule} from "@angular/fire/compat";
     //KosarComponent,
     //RolunkComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        AngularFireModule.initializeApp(environment.firebase),
-        provideFirebaseApp(() => initializeApp(environment.firebase)),
-        provideAuth(() => getAuth()),
-        provideFirestore(() => getFirestore()),
-        provideStorage(() => getStorage()),
-        MatIconModule,
-        MatMenuModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
+    provideStorage(() => getStorage()),
+    MatIconModule,
+    MatMenuModule,
+    FormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
