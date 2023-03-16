@@ -38,6 +38,7 @@ export class KeresesComponent implements OnInit {
   products25: any[] | undefined;
   products26: any[] | undefined;
   products27: any[] | undefined;
+  products28: any[] | undefined;
   quantity: number = 0;
   quantity1: any = 0;
   quantity2: any = 0;
@@ -204,6 +205,13 @@ export class KeresesComponent implements OnInit {
       this.keresesS.searchProducts27(searchText)
         .subscribe((data) => {
           this.products27 = data;
+          this.searchText = searchText;
+        });
+
+
+      this.keresesS.searchProducts28(searchText)
+        .subscribe((data) => {
+          this.products28 = data;
           this.searchText = searchText;
         });
 

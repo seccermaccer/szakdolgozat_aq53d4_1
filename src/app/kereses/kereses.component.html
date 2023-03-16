@@ -1,4 +1,18 @@
+<div class="search-results" *ngIf="products28 && products28.length ">
 
+  <div class="search-result" *ngFor="let product of products28">
+    <h3>{{ product.productName15 }}</h3>
+    <h3>{{ product.leiras14 }}</h3>
+    <h3>{{ product.ar14 }} Ft</h3>
+
+    <input type="number" [(ngModel)]="quantity1" min="0">
+    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" (click)="addToCart(product, quantity1)">
+      Termék kosárba helyezése
+    </button>
+
+  </div>
+</div>
 
 <div class="search-results" *ngIf="products && products.length ">
 
@@ -441,5 +455,5 @@
 && !(products16 && products16.length) && !(products17 && products17.length)
 && !(products18 && products18.length) && !(products19 && products19.length)
 && !(products20 && products20.length) && !(products21 && products21.length) && !(products22 && products22.length) && !(products23 && products23.length)
-&& !(products24 && products24.length) && !(products25 && products25.length) && !(products26 && products26.length) && !(products27 && products27.length)">Sajnáljuk,de ilyen termék nem található az oldalon!</div>
+&& !(products24 && products24.length) && !(products25 && products25.length) && !(products26 && products26.length) && !(products27 && products27.length) && !(products28 && products28.length)">Sajnáljuk,de ilyen termék nem található az oldalon!</div>
 

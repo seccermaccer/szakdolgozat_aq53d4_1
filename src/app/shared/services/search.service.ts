@@ -205,6 +205,13 @@ export class SearchService {
     ).valueChanges();
   }
 
+  searchProducts28(searchText: string) {
+    return this.afs.collection('Products', ref =>
+      ref.where('productName60', '>=', searchText)
+        .where('productName60', '<', searchText + '\uf8ff')
+    ).valueChanges();
+  }
+
 
 
 }

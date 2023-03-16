@@ -38,6 +38,7 @@ export class AppComponent implements  OnInit{
   products25: any[] | undefined;
   products26: any[] | undefined;
   products27: any[] | undefined;
+  products28: any[] | undefined;
   searchText2: string | null;
   title = 'my-app';
 
@@ -201,6 +202,12 @@ export class AppComponent implements  OnInit{
       this.products27 = data;
       this.router.navigate(['/kereses'], { queryParams: { q: searchText } });
     });
+    this.keresesS.searchProducts28(searchText).subscribe((data) => {
+      this.products28 = data;
+      this.router.navigate(['/kereses'], { queryParams: { q: searchText } });
+    });
+
+
 
 
   }
