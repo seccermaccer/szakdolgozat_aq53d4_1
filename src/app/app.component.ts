@@ -12,9 +12,11 @@ export class AppComponent implements  OnInit{
   loggedInUser?: firebase.default.User | null;
   searchTerm!: string;
   products: any[] | undefined;
-  searchText: string | undefined;
+  searchText2: string | null;
 
   constructor(public authService: AuthService,private router: Router,private keresesS: SearchService) {
+    this.searchText2 = null;
+    this.searchTerm = ''
   }
 
   ngOnInit(): void {
@@ -50,12 +52,21 @@ export class AppComponent implements  OnInit{
   //
   // }
 
+  // search() {
+  //   this.keresesS.searchProducts('AGFAPHOTO Realimove CC2700 videókamera')
+  //     .subscribe((data) => {
+  //       this.products = data;
+  //       console.log(data)
+  //       this.router.navigate(['/kereses'], { queryParams: { q: this.searchText } });
+  //     });
+  // }
+
   search() {
-    this.keresesS.searchProducts('AGFAPHOTO Realimove CC2700 videókamera')
+    const searchText = this.searchTerm;
+    this.keresesS.searchProducts(searchText)
       .subscribe((data) => {
         this.products = data;
-        console.log(data)
-        this.router.navigate(['/kereses'], { queryParams: { q: this.searchText } });
+        this.router.navigate(['/kereses'], { queryParams: { q: searchText } });
       });
   }
 }

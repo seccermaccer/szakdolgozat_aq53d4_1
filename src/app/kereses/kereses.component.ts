@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
+import {SearchService} from "../shared/services/search.service";
 
 @Component({
   selector: 'app-kereses',
@@ -11,11 +12,14 @@ export class KeresesComponent implements OnInit {
   searchText = '';
   products: any[] | undefined;
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute,private keresesS: SearchService) {
     this.route.queryParams.subscribe(params => {
-      this.searchText = params['q'] || '';
-      // Keresés a Firestore adatbázisban, és eredmények frissítése
-      // this.products = ...
+      const searchText = params['q'];
+      this.keresesS.searchProducts(searchText)
+        .subscribe((data) => {
+          this.products = data;
+          this.searchText = searchText;
+        });
     });
   }
 
