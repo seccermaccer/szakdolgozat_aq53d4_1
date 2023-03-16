@@ -16,7 +16,7 @@ export class AppComponent implements  OnInit{
 
   constructor(public authService: AuthService,private router: Router,private keresesS: SearchService) {
     this.searchText2 = null;
-    this.searchTerm = ''
+    this.searchTerm = '';
   }
 
   ngOnInit(): void {
