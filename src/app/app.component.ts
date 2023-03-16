@@ -39,6 +39,7 @@ export class AppComponent implements  OnInit{
   products26: any[] | undefined;
   products27: any[] | undefined;
   searchText2: string | null;
+  title = 'my-app';
 
   constructor(public authService: AuthService,private router: Router,private keresesS: SearchService) {
     this.searchText2 = null;
