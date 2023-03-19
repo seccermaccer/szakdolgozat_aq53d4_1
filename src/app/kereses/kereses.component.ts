@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {SearchService} from "../shared/services/search.service";
 import {KosarService} from "../shared/services/kosar.service";
+import {RatingService} from "../shared/services/rating.service";
 
 @Component({
   selector: 'app-kereses',
@@ -93,8 +94,35 @@ export class KeresesComponent implements OnInit {
   quantity26: any = 0;
   quantity27: any = 0;
   quantity28: any = 0;
+  rate: number = 0;
+  rate2: number = 0;
+  rate3: number = 0;
+  rate4: number = 0;
+  rate5: number = 0;
+  rate6: number = 0;
+  rate7: number = 0;
+  rate8: number = 0;
+  rate11: number = 0;
+  rate9: number = 0;
+  rate10: number = 0;
+  rate12: number = 0;
+  rate13: number = 0;
+  rate14: number = 0;
+  rate15: number = 0;
+  rate16: number = 0;
+  rate17: number = 0;
+  rate18: number = 0;
+  rate19: number = 0;
+  rate20: number = 0;
+  rate21: number = 0;
+  rate22: number = 0;
+  rate23: number = 0;
+  rate24: number = 0;
+  rate25: number = 0;
+  rate26: number = 0;
+  rate27: number = 0;
 
-  constructor(private route: ActivatedRoute,private keresesS: SearchService,private cartService: KosarService) {
+  constructor(private route: ActivatedRoute,private keresesS: SearchService,private cartService: KosarService,private rating: RatingService) {
     this.route.queryParams.subscribe(params => {
       const searchText = params['q'];
       this.keresesS.searchProducts(searchText)
@@ -399,9 +427,226 @@ export class KeresesComponent implements OnInit {
 
 
     });
+
+
   }
 
   ngOnInit(): void {
+    this.rating.getAverageRating('ugfsugzfdshuiogdfshis').subscribe(rater =>
+    {
+      console.log(rater)
+      this.rate = rater;
+    },error => {
+      console.error(error)
+    })
+
+    this.rating.getAverageRating('asdasdasd').subscribe(rater =>
+    {
+      console.log(rater)
+      this.rate2 = rater;
+    },error => {
+      console.error(error)
+    })
+
+    this.rating.getAverageRating('isdfhuisdhuifhiushiu').subscribe(rater =>
+    {
+      console.log(rater)
+      this.rate3 = rater;
+    },error => {
+      console.error(error)
+    })
+
+    this.rating.getAverageRating('jidfijfdjikjkdfklsdfklslkssssss').subscribe(rater =>
+    {
+      console.log(rater)
+      this.rate4 = rater;
+    },error => {
+      console.error(error)
+    })
+
+    this.rating.getAverageRating('sdfjhghfdshjgfdhjokssfdsaaaaa').subscribe(rater =>
+    {
+      console.log(rater)
+      this.rate5 = rater;
+    },error => {
+      console.error(error)
+    })
+
+    this.rating.getAverageRating('bhdsafihudsiafi').subscribe(rater =>
+    {
+      console.log(rater)
+      this.rate6 = rater;
+    },error => {
+      console.error(error)
+    })
+
+    this.rating.getAverageRating('urehuituireiujnoengr').subscribe(rater =>
+    {
+      console.log(rater)
+      this.rate7 = rater;
+    },error => {
+      console.error(error)
+    })
+
+    this.rating.getAverageRating('fgdfsgdfsgvvvvvv').subscribe(rater =>
+    {
+      console.log(rater)
+      this.rate8 = rater;
+    },error => {
+      console.error(error)
+    })
+
+    this.rating.getAverageRating('asdjihfjasdhbj').subscribe(rater =>
+    {
+      console.log(rater)
+      this.rate9 = rater;
+    },error => {
+      console.error(error)
+    })
+
+    this.rating.getAverageRating('ztustzhsidtista').subscribe(rater =>
+    {
+      console.log(rater)
+      this.rate10 = rater;
+    },error => {
+      console.error(error)
+    })
+
+    this.rating.getAverageRating('iasioasdhiofasduio').subscribe(rater =>
+    {
+      console.log(rater)
+      this.rate11 = rater;
+    },error => {
+      console.error(error)
+    })
+
+    this.rating.getAverageRating('iksdfjkgdfojkgdfsjpkle').subscribe(rater =>
+    {
+      console.log(rater)
+      this.rate12 = rater;
+    },error => {
+      console.error(error)
+    })
+
+    this.rating.getAverageRating('fdsgdfshgjdsfgjkds').subscribe(rater =>
+    {
+      console.log(rater)
+      this.rate13 = rater;
+    },error => {
+      console.error(error)
+    })
+
+    this.rating.getAverageRating('werzhuhtirwehuirwhier').subscribe(rater =>
+    {
+      console.log(rater)
+      this.rate14 = rater;
+    },error => {
+      console.error(error)
+    })
+
+    this.rating.getAverageRating('zuuziweiuhirweihrwei').subscribe(rater =>
+    {
+      console.log(rater)
+      this.rate15 = rater;
+    },error => {
+      console.error(error)
+    })
+
+    this.rating.getAverageRating('fsadfsadaasddafsdvc').subscribe(rater =>
+    {
+      console.log(rater)
+      this.rate16 = rater;
+    },error => {
+      console.error(error)
+    })
+
+    this.rating.getAverageRating('bdfggdfvbdfvsdsfafa').subscribe(rater =>
+    {
+      console.log(rater)
+      this.rate17 = rater;
+    },error => {
+      console.error(error)
+    })
+
+    this.rating.getAverageRating('bsuihfiksdnfsdiofjns').subscribe(rater =>
+    {
+      console.log(rater)
+      this.rate18 = rater;
+    },error => {
+      console.error(error)
+    })
+
+    this.rating.getAverageRating('sssssssssssssss').subscribe(rater =>
+    {
+      console.log(rater)
+      this.rate19 = rater;
+    },error => {
+      console.error(error)
+    })
+
+    this.rating.getAverageRating('uhrsgzhudthbjrebt').subscribe(rater =>
+    {
+      console.log(rater)
+      this.rate20 = rater;
+    },error => {
+      console.error(error)
+    })
+
+    this.rating.getAverageRating('qqqqqqqqqqqqqqqqqq').subscribe(rater =>
+    {
+      console.log(rater)
+      this.rate21 = rater;
+    },error => {
+      console.error(error)
+    })
+
+    this.rating.getAverageRating('kjdfjikdfshjnhjsfdhjik').subscribe(rater =>
+    {
+      console.log(rater)
+      this.rate22 = rater;
+    },error => {
+      console.error(error)
+    })
+
+    this.rating.getAverageRating('erztebujhbrejbt').subscribe(rater =>
+    {
+      console.log(rater)
+      this.rate23 = rater;
+    },error => {
+      console.error(error)
+    })
+
+    this.rating.getAverageRating('ndfnbgnbdfgzhdofij').subscribe(rater =>
+    {
+      console.log(rater)
+      this.rate24 = rater;
+    },error => {
+      console.error(error)
+    })
+
+    this.rating.getAverageRating('dsdfsdsvfsdvdsfvsdfgdfsgsdfg').subscribe(rater =>
+    {
+      console.log(rater)
+      this.rate25 = rater;
+    },error => {
+      console.error(error)
+    })
+
+    this.rating.getAverageRating('eruhtuhbrehbterhb').subscribe(rater =>
+    {
+      console.log(rater)
+      this.rate26 = rater;
+    },error => {
+      console.error(error)
+    })
+
+    this.rating.getAverageRating('quzzhreqhuirhuiqwerewr').subscribe(rater =>
+    {
+      console.log(rater)
+      this.rate27 = rater;
+    },error => {
+      console.error(error)
+    })
   }
 
   addToCart(product: any, quantity: number) {
