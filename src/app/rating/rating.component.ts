@@ -75,8 +75,8 @@ export class RatingComponent implements OnInit {
         localStorage.setItem('comments', JSON.stringify(previousComments));
 
         this.commentS.create(comment).then(_ => {
-          window.alert("Sikeres véleményezés és értékelés");
-          this.router.navigate(['rating'])
+          window.alert("Sikeres véleményezés és értékelés!");
+          this.router.navigate(['sajat-komment'])
         }).catch(error => {
           console.error(error)
           window.alert(error);

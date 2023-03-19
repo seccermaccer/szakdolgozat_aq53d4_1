@@ -1,45 +1,51 @@
-<div *ngIf="user">
-  <form style="width: 600px;height: 300px;margin-left: 600px"   (ngSubmit)="addComment()" [formGroup]="commentsForm">
-    <div class="relative z-0 w-100 mb-6 group">
-      <input type="text" [(ngModel)]="user.username" formControlName="username" id="username" class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-      <label for="username" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Felhasználónév</label>
+
+
+<div class="flex flex-col items-center justify-center px-6 py-8 mx-auto lg:py-0" style="margin-left: auto;margin-top: 0;margin-right: auto" *ngIf="user">
+  <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700" >
+    <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+      <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+        Értékelés és véleményezés
+      </h1>
+      <form class="space-y-4 md:space-y-1" (ngSubmit)="addComment()" [formGroup]="commentsForm">
+        <div>
+          <label for="username" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Felhasználónév</label>
+          <input [(ngModel)]="user.username"  type="text" formControlName="username" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="asd1213" required="">
+        </div>
+        <mat-error *ngIf="username?.errors?.['required']">
+          Felhasználónév megadása kötelező
+        </mat-error>
+
+        <div>
+          <label for="productName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Termék neve</label>
+          <input type="text" formControlName="productName" id="productName" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Samsung TV" required="">
+        </div>
+        <mat-error *ngIf="productName?.errors?.['required']">
+          Termék megadása kötelező
+        </mat-error>
+
+
+        <div>
+          <label for="comment" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Komment</label>
+          <input type="text" formControlName="comment" id="comment" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Ez a kommentem" required="">
+        </div>
+        <mat-error *ngIf="comment?.errors?.['required']">
+          Komment megadása kötelező
+        </mat-error>
+
+        <label for="rating" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Értékelés:</label>
+        <input type="range" id="rating" formControlName="rating" min="1" max="5">
+        <mat-error *ngIf="rating2?.errors?.['required']">
+          Értékelés megadása kötelező
+        </mat-error>
+
+
+        <button type="submit" class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" style="background-color: black">Elküldés</button>
+      </form>
     </div>
-    <mat-error *ngIf="username?.errors?.['required']">
-      Felhasználónév megadása kötelező
-    </mat-error>
-
-    <div class="relative z-0 w-full mb-6 group">
-      <input type="text" formControlName="productName" id="productName" class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-      <label for="productName" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Termék neve</label>
-    </div>
-    <mat-error *ngIf="productName?.errors?.['required']">
-      Termék megadása kötelező
-    </mat-error>
-
-    <div class="relative z-0 w-full mb-6 group">
-      <input type="text" formControlName="comment" id="comment" class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-      <label for="comment" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Komment</label>
-    </div>
-    <mat-error *ngIf="comment?.errors?.['required']">
-      Komment megadása kötelező
-    </mat-error>
-
-
-    <label for="rating">Értékelés:</label>
-    <input type="range" id="rating" formControlName="rating" min="1" max="5">
-    <mat-error *ngIf="rating2?.errors?.['required']">
-      Értékelés megadása kötelező
-    </mat-error>
-
-
-
-
-    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Elküldés</button>
-  </form>
-
+  </div>
 </div>
 
-<button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+<button id="gomb" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
         type="button" routerLink="/kommentek">
   Kommentek megtekintése
 </button>
