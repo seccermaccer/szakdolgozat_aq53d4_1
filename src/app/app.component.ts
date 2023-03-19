@@ -39,6 +39,32 @@ export class AppComponent implements  OnInit{
   products26: any[] | undefined;
   products27: any[] | undefined;
   products28: any[] | undefined;
+  products29: any[] | undefined;
+  products30: any[] | undefined;
+  products31: any[] | undefined;
+  products32: any[] | undefined;
+  products33: any[] | undefined;
+  products34: any[] | undefined;
+  products35: any[] | undefined;
+  products36: any[] | undefined;
+  products37: any[] | undefined;
+  products38: any[] | undefined;
+  products39: any[] | undefined;
+  products40: any[] | undefined;
+  products41: any[] | undefined;
+  products42: any[] | undefined;
+  products43: any[] | undefined;
+  products44: any[] | undefined;
+  products45: any[] | undefined;
+  products46: any[] | undefined;
+  products47: any[] | undefined;
+  products48: any[] | undefined;
+  products49: any[] | undefined;
+  products50: any[] | undefined;
+  products51: any[] | undefined;
+  products52: any[] | undefined;
+  products53: any[] | undefined;
+  products54: any[] | undefined;
   searchText2: string | null;
   title = 'my-app';
 
@@ -204,6 +230,134 @@ export class AppComponent implements  OnInit{
     });
     this.keresesS.searchProducts28(searchText).subscribe((data) => {
       this.products28 = data;
+      this.router.navigate(['/kereses'], { queryParams: { q: searchText } });
+    });
+    this.keresesS.searchProducts29(searchText).subscribe((data) => {
+      this.products29 = data;
+      this.router.navigate(['/kereses'], { queryParams: { q: searchText } });
+    });
+    this.keresesS.searchProducts30(searchText).subscribe((data) => {
+      this.products30 = data;
+      this.router.navigate(['/kereses'], { queryParams: { q: searchText } });
+    });
+
+    this.keresesS.searchProducts31(searchText).subscribe((data) => {
+      this.products31 = data;
+      this.router.navigate(['/kereses'], { queryParams: { q: searchText } });
+    });
+
+    this.keresesS.searchProducts32(searchText).subscribe((data) => {
+      this.products32 = data;
+      this.router.navigate(['/kereses'], { queryParams: { q: searchText } });
+    });
+
+    this.keresesS.searchProducts33(searchText).subscribe((data) => {
+      this.products33 = data;
+      this.router.navigate(['/kereses'], { queryParams: { q: searchText } });
+    });
+
+    this.keresesS.searchProducts34(searchText).subscribe((data) => {
+      this.products34 = data;
+      this.router.navigate(['/kereses'], { queryParams: { q: searchText } });
+    });
+
+    this.keresesS.searchProducts35(searchText).subscribe((data) => {
+      this.products35 = data;
+      this.router.navigate(['/kereses'], { queryParams: { q: searchText } });
+    });
+
+    this.keresesS.searchProducts36(searchText).subscribe((data) => {
+      this.products36 = data;
+      this.router.navigate(['/kereses'], { queryParams: { q: searchText } });
+    });
+
+    this.keresesS.searchProducts37(searchText).subscribe((data) => {
+      this.products37 = data;
+      this.router.navigate(['/kereses'], { queryParams: { q: searchText } });
+    });
+
+    this.keresesS.searchProducts38(searchText).subscribe((data) => {
+      this.products38 = data;
+      this.router.navigate(['/kereses'], { queryParams: { q: searchText } });
+    })
+
+    this.keresesS.searchProducts39(searchText).subscribe((data) => {
+      this.products39 = data;
+      this.router.navigate(['/kereses'], { queryParams: { q: searchText } });
+    });
+
+    this.keresesS.searchProducts40(searchText).subscribe((data) => {
+      this.products40 = data;
+      this.router.navigate(['/kereses'], { queryParams: { q: searchText } });
+    });
+
+    this.keresesS.searchProducts41(searchText).subscribe((data) => {
+      this.products41 = data;
+      this.router.navigate(['/kereses'], { queryParams: { q: searchText } });
+    });
+
+    this.keresesS.searchProducts42(searchText).subscribe((data) => {
+      this.products42 = data;
+      this.router.navigate(['/kereses'], { queryParams: { q: searchText } });
+    });
+
+    this.keresesS.searchProducts43(searchText).subscribe((data) => {
+      this.products43 = data;
+      this.router.navigate(['/kereses'], { queryParams: { q: searchText } });
+    });
+
+    this.keresesS.searchProducts44(searchText).subscribe((data) => {
+      this.products44 = data;
+      this.router.navigate(['/kereses'], { queryParams: { q: searchText } });
+    });
+
+    this.keresesS.searchProducts45(searchText).subscribe((data) => {
+      this.products45 = data;
+      this.router.navigate(['/kereses'], { queryParams: { q: searchText } });
+    });
+
+    this.keresesS.searchProducts46(searchText).subscribe((data) => {
+      this.products46 = data;
+      this.router.navigate(['/kereses'], { queryParams: { q: searchText } });
+    });
+
+    this.keresesS.searchProducts47(searchText).subscribe((data) => {
+      this.products47 = data;
+      this.router.navigate(['/kereses'], { queryParams: { q: searchText } });
+    });
+
+    this.keresesS.searchProducts48(searchText).subscribe((data) => {
+      this.products48 = data;
+      this.router.navigate(['/kereses'], { queryParams: { q: searchText } });
+    });
+
+    this.keresesS.searchProducts49(searchText).subscribe((data) => {
+      this.products49 = data;
+      this.router.navigate(['/kereses'], { queryParams: { q: searchText } });
+    });
+
+    this.keresesS.searchProducts50(searchText).subscribe((data) => {
+      this.products50 = data;
+      this.router.navigate(['/kereses'], { queryParams: { q: searchText } });
+    });
+
+    this.keresesS.searchProducts51(searchText).subscribe((data) => {
+      this.products51 = data;
+      this.router.navigate(['/kereses'], { queryParams: { q: searchText } });
+    });
+
+    this.keresesS.searchProducts52(searchText).subscribe((data) => {
+      this.products52 = data;
+      this.router.navigate(['/kereses'], { queryParams: { q: searchText } });
+    });
+
+    this.keresesS.searchProducts53(searchText).subscribe((data) => {
+      this.products53 = data;
+      this.router.navigate(['/kereses'], { queryParams: { q: searchText } });
+    });
+
+    this.keresesS.searchProducts54(searchText).subscribe((data) => {
+      this.products54 = data;
       this.router.navigate(['/kereses'], { queryParams: { q: searchText } });
     });
 
