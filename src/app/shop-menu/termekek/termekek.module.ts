@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { TermekekRoutingModule } from './termekek-routing.module';
 import { TermekekComponent } from './termekek.component';
 import {FormsModule} from "@angular/forms";
+import {MatIconModule} from "@angular/material/icon";
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import {FormsModule} from "@angular/forms";
     imports: [
         CommonModule,
         TermekekRoutingModule,
-        FormsModule
+        FormsModule,
+        MatIconModule
     ]
 })
 export class TermekekModule { }

@@ -1,64 +1,77 @@
-<div *ngFor="let product of products" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}">
-  <p>{{ product.productName1 }}</p>
-  <p>{{ product.leiras }}</p>
-  <p>{{ product.ar }} Ft</p>
-  <p>{{ rate2 }}</p>
+<div *ngFor="let product of products" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}" id="egy">
+  <img src="assets/termekek/1885024_coolermaster-mwe-gold-550w-non-modular-v2.webp" style="max-width: 130px;max-height: 130px;position: absolute;z-index: 100;border: 1px solid #000000">
 
-  <input type="number" [(ngModel)]="quantity" min="0">
-  <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+
+  <p class="asd" style="margin-right: 60px">{{ product.productName1 }}</p>
+  <p class="asd" style="margin-left: 140px">{{ product.leiras }}</p>
+  <p class="asd">{{ product.ar }} Ft</p>
+  <p class="asd" style="margin-right: 10px">{{ rate2.toFixed(2) }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px"></p>
+
+
+
+  <input class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" type="number" [(ngModel)]="quantity" min="0">
+  <button style="margin-left: 20px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="button" (click)="addToCart(product, quantity)">
     Termék kosárba helyezése
   </button>
 </div>
 
 
-<div *ngFor="let product of products9" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}">
-  <p>{{ product.productName2 }}</p>
-  <p>{{ product.leiras1 }}</p>
-  <p>{{ product.ar1 }} Ft</p>
-  <p>{{ rate19 }}</p>
+<div *ngFor="let product of products9" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}"  id="ketto">
+  <img src="assets/termekek/1466859_asus_prime_b550m_k.webp" style="max-width: 130px;max-height: 130px;position: absolute;z-index: 100;border: 1px solid #000000">
 
-  <input type="number" [(ngModel)]="quantity1" min="0">
-  <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+  <p class="asd" style="margin-right: 253px">{{ product.productName2 }}</p>
+  <p class="asd" style="margin-left: 140px">{{ product.leiras1 }}</p>
+  <p class="asd">{{ product.ar1 }} Ft</p>
+  <p class="asd" style="margin-right: 10px">{{ rate19.toFixed(2) }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px"></p>
+
+  <input class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 30px" type="number" [(ngModel)]="quantity1" min="0">
+  <button style="margin-left: 20px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="button" (click)="addToCart(product, quantity1)">
     Termék kosárba helyezése
   </button>
 </div>
 
-<div *ngFor="let product of products10" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}">
-  <p>{{ product.productName3 }}</p>
-  <p>{{ product.leiras2 }}</p>
-  <p>{{ product.ar2 }} Ft</p>
-  <p>{{ rate21 }}</p>
+<div *ngFor="let product of products10" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}" id="harom">
+  <img src="assets/termekek/2138107_amd-ryzen-5-5600g-390ghz-am4-oem-100-100000252mpk.webp" style="max-width: 130px;max-height: 130px;position: absolute;z-index: 100;border: 1px solid #000000">
 
-  <input type="number" [(ngModel)]="quantity2" min="0">
-  <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+  <p class="asd" style="margin-right: 0px">{{ product.productName3 }}</p>
+  <p class="asd" style="margin-left: 140px">{{ product.leiras2 }}</p>
+  <p class="asd">{{ product.ar2 }} Ft</p>
+  <p class="asd" style="margin-right: 10px">{{ rate21.toFixed(2) }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px"></p>
+
+  <input class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 30px" type="number" [(ngModel)]="quantity2" min="0">
+  <button style="margin-left: 20px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="button" (click)="addToCart(product, quantity2)">
     Termék kosárba helyezése
   </button>
 </div>
 
-<div *ngFor="let product of products11" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}">
-  <p>{{ product.productName4 }}</p>
-  <p>{{ product.leiras3 }}</p>
-  <p>{{ product.ar3 }} Ft</p>
-  <p>{{ rate13 }} Ft</p>
+<div *ngFor="let product of products11" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}" id="negy">
+  <img src="assets/termekek/1331059_msi_geforce_gtx_1660_6gb_gddr6_super_ventus_xs_oc_pcie.webp" style="max-width: 130px;max-height: 130px;position: absolute;z-index: 100;border: 1px solid #000000">
 
-  <input type="number" [(ngModel)]="quantity3" min="0">
-  <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+  <p class="asd" style="margin-right: 0px">{{ product.productName4 }}</p>
+  <p class="asd" style="margin-left: 133px">{{ product.leiras3 }}</p>
+  <p class="asd">{{ product.ar3 }} Ft</p>
+  <p class="asd" style="margin-right: 10px">{{ rate13.toFixed(2) }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px"></p>
+
+  <input class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 40px" type="number" [(ngModel)]="quantity3" min="0">
+  <button style="margin-left: 20px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="button" (click)="addToCart(product, quantity3)">
     Termék kosárba helyezése
   </button>
 </div>
 
-<div *ngFor="let product of products12" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}">
-  <p>{{ product.productName5 }}</p>
-  <p>{{ product.leiras4 }}</p>
-  <p>{{ product.ar4 }} Ft</p>
-  <p>{{ rate8 }}</p>
+<div *ngFor="let product of products12" [ngStyle]="{'display': selectedProductId == product.id ? 'block' : 'none'}" id="ot">
+  <img src="assets/termekek/176202647.cooler-master-force-500-for-500-kkn1.jpg" style="max-width: 130px;max-height: 130px;position: absolute;z-index: 100;border: 1px solid #000000">
 
-  <input type="number" [(ngModel)]="quantity4" min="0">
-  <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+  <p class="asd" style="margin-right: 255px">{{ product.productName5 }}</p>
+  <p class="asd" style="margin-left: 105px">{{ product.leiras4 }}</p>
+  <p class="asd">{{ product.ar4 }} Ft</p>
+  <p class="asd" style="margin-right: 10px">{{ rate8.toFixed(2) }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px"></p>
+
+  <input class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 60px" type="number" [(ngModel)]="quantity4" min="0">
+  <button style="margin-left: 20px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="button" (click)="addToCart(product, quantity4)">
     Termék kosárba helyezése
   </button>
@@ -365,7 +378,7 @@
   </button>
 </div>
 
-<button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+<button style="margin-left: 42vw;margin-bottom: 20px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
         type="button" routerLink="/rating">
   Termék értékelése,véleményezése
 </button>
