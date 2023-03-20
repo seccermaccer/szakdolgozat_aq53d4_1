@@ -1,11 +1,10 @@
-.asd{
+.asd {
   color: white;
   float: right;
-
 }
 
-#egy{
-  margin-left: 33vw;
+.product-card {
+  margin-left: 5vw;
   max-width: 600px;
   font-size: 15px;
 
@@ -16,60 +15,16 @@
   max-height: 250px;
   background-color: #336b34;
   margin-bottom: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+
+  z-index: 0;
 }
 
-#ketto{
-  margin-left: 33vw;
-  max-width: 600px;
-  font-size: 15px;
-
-  border-radius: 25px;
-  border: 2px solid #000000;
-  padding: 1.5vw;
-
-  max-height: 250px;
-  background-color: #336b34;
-  margin-bottom: 20px;
-}
-
-#harom{
-  margin-left: 33vw;
-  max-width: 600px;
-  font-size: 15px;
-
-  border-radius: 25px;
-  border: 2px solid #000000;
-  padding: 1.5vw;
-
-  max-height: 250px;
-  background-color: #336b34;
-  margin-bottom: 20px;
-}
-
-#negy{
-  margin-left: 33vw;
-  max-width: 600px;
-  font-size: 15px;
-
-  border-radius: 25px;
-  border: 2px solid #000000;
-  padding: 1.5vw;
-
-  max-height: 250px;
-  background-color: #336b34;
-  margin-bottom: 20px;
-}
-
-#ot{
-  margin-left: 33vw;
-  max-width: 600px;
-  font-size: 15px;
-
-  border-radius: 25px;
-  border: 2px solid #000000;
-  padding: 1.5vw;
-
-  max-height: 250px;
-  background-color: #336b34;
-  margin-bottom: 20px;
+@media screen and (min-width: 768px) {
+  .product-card {
+    margin-left: 33vw;
+  }
 }
