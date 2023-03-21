@@ -1,20 +1,23 @@
-#cim{
+
+
+#cim {
   color: white;
-  margin-left: 44vw;
+  text-align: center;
+  margin: 1rem 0;
 }
 
-.asd{
-  color: white
-
+.asd {
+  color: white;
 }
 
-#kommentek{
-  margin-left: 33vw;
+#kommentek {
+  margin: 0 auto;
   max-width: 600px;
   font-size: 18px;
+  padding-bottom: 20px;
 }
 
-#komment{
+#komment {
   border-radius: 25px;
   border: 2px solid #000000;
   padding: 1.5vw;
@@ -26,13 +29,14 @@
   padding-bottom: 20px;
 }
 
-#gomb{
-  margin-left: 44vw;
-  margin-bottom: 20px;
-
-
+#gomb {
+  display: block;
+  margin: 0 auto 20px auto;
 }
 
-#kommentek{
-  padding-bottom: 20px;
+@media screen and (max-width: 768px) {
+  #kommentek {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }
