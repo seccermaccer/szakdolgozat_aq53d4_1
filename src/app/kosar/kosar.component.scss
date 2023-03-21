@@ -1,0 +1,31 @@
+#gomb1{
+  margin-left: 35vw;
+}
+
+#gomb2{
+  margin-left: 3vw;
+}
+
+#gomb3{
+  margin-left: 3vw;
+}
+
+.product-card {
+  margin-left: 5vw;
+  max-width: 1000px;
+  font-size: 15px;
+
+  border-radius: 25px;
+  border: 2px solid #000000;
+  padding: 1.5vw;
+
+  max-height: 250px;
+  background-color: #336b34;
+  margin-bottom: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+
+  z-index: 0;
+}
