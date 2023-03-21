@@ -1,14 +1,13 @@
+
+
 <h1 id="cim">Itt vannak a kommentjeid:</h1>
 <div *ngIf="user && comment2">
-
   <ul id="kommentek">
     <li *ngFor="let comment of comments; let i = index" id="komment">
       <p class="asd"><strong>Felhasználónév:</strong> {{ comment.username }}</p>
       <p class="asd"><strong>Termék neve:</strong> {{ comment.productName }}</p>
       <p class="asd"><strong>Komment:</strong> {{ comment.comment }}</p>
       <p class="asd"><strong>Értékelés:</strong> {{ comment.rating }}</p>
-<!--      <button *ngIf="comment.username === user.username" (click)="deleteComment(comment.id)">Törlés</button>-->
-<!--      <button routerLink="/update-komment" (click)="updateComment2(comment.id, i)">Update</button>-->
       <button id="gomb" class="bg-red-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded-full my-0"
               *ngIf="comment.username === user.username" (click)="deleteComment(comment.id)">
         Törlés
@@ -16,3 +15,5 @@
     </li>
   </ul>
 </div>
+
+
