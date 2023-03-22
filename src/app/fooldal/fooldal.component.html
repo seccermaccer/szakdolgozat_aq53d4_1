@@ -1,8 +1,8 @@
-<div class="container mx-auto px-4">
+<div class="container mx-auto px-4" >
   <h1 class="text-center text-3xl font-bold my-6 text-white">Üdvözöllek a főoldalon!</h1>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-    <div *ngFor="let article of (news$ | async)?.articles" class="bg-white shadow-md rounded-lg p-6">
+    <div *ngFor="let article of (news$ | async)?.articles" class="bg-white shadow-md rounded-lg p-6"  style="margin-bottom: 20px">
       <h3 class="text-xl font-semibold mb-4">{{ article.title }}</h3>
       <p class="text-gray-600 mb-4">{{ article.description }}</p>
       <a class="text-blue-500 hover:text-blue-700" [href]="article.url" target="_blank" rel="noopener noreferrer">Tovább a cikkre</a>

@@ -153,14 +153,15 @@
 
 <div class="search-results" *ngIf="products36 && products36.length ">
 
-  <div class="search-result" *ngFor="let product of products36">
-    <h3>{{ product.productName24 }}</h3>
-    <h3>{{ product.leiras23 }}</h3>
-    <h3>{{ product.ar23 }} Ft</h3>
-    <h3>{{ rate9 }}</h3>
+  <div class="product-card" *ngFor="let product of products36">
+    <img src="assets/termekek/1623968_corsair_k55_rgb_pro_us_angol_fekete.webp" style="max-width: 130px;max-height: 130px;position: absolute;z-index: 100;border: 1px solid #000000">
+    <h3 class="asd" style="margin-left: 135px">{{ product.productName24 }}</h3>
+    <h3 class="asd" style="margin-left: 135px">{{ product.leiras23 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 135px">{{ product.ar23 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 135px;margin-left: 400px">{{ rate9.toFixed(2) }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
 
-    <input type="number" [(ngModel)]="quantity8" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <input type="number" [(ngModel)]="quantity8" min="0" class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 25px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 165px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity8)">
       Termék kosárba helyezése
     </button>
@@ -170,14 +171,16 @@
 
 <div class="search-results" *ngIf="products37 && products37.length ">
 
-  <div class="search-result" *ngFor="let product of products37">
-    <h3>{{ product.productName20 }}</h3>
-    <h3>{{ product.leiras19 }}</h3>
-    <h3>{{ product.ar19 }} Ft</h3>
-    <h3>{{ rate10 }}</h3>
+  <div class="product-card" *ngFor="let product of products37" style="max-height: 300px">
+    <img src="assets/termekek/1614246_samsung_au7000_4k_sik_smart_uhd_tv_55_ue55au7102kxxh.webp" style="max-width: 170px;max-height: 170px;position: absolute;z-index: 100;border: 1px solid #000000;margin-left: -18px">
 
-    <input type="number" [(ngModel)]="quantity9" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <h3 class="asd" style="margin-left: 155px">{{ product.productName20 }}</h3>
+    <h3 class="asd" style="margin-left: 155px">{{ product.leiras19 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 180px">{{ product.ar19 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 180px;margin-left: 400px">{{ rate10.toFixed(2) }}<img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
+
+    <input type="number" [(ngModel)]="quantity9" min="0"  class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 0px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 197px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity9)">
       Termék kosárba helyezése
     </button>
@@ -187,14 +190,17 @@
 
 <div class="search-results" *ngIf="products38 && products38.length ">
 
-  <div class="search-result" *ngFor="let product of products38">
-    <h3>{{ product.productName12 }}</h3>
-    <h3>{{ product.leiras11 }}</h3>
-    <h3>{{ product.ar11 }} Ft</h3>
-    <h3>{{ rate11 }}</h3>
+  <div class="product-card" *ngFor="let product of products38">
+    <img src="assets/termekek/1474885_camry_cr_8054_mosogep___centrifugalas.webp" style="max-width: 140px;max-height: 140px;position: absolute;z-index: 100;border: 1px solid #000000;margin-left: -9px">
 
-    <input type="number" [(ngModel)]="quantity10" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+
+    <h3 class="asd" style="margin-left: 135px">{{ product.productName12 }}</h3>
+    <h3  class="asd" style="margin-left: 135px">{{ product.leiras11 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 135px">{{ product.ar11 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 135px;margin-left: 400px">{{ rate11.toFixed(2)  }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
+
+    <input type="number" [(ngModel)]="quantity10" min="0" class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: -5px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 165px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity10)">
       Termék kosárba helyezése
     </button>
@@ -204,14 +210,15 @@
 
 <div class="search-results" *ngIf="products39 && products39.length ">
 
-  <div class="search-result" *ngFor="let product of products39">
-    <h3>{{ product.productName6 }}</h3>
-    <h3>{{ product.leiras5 }}</h3>
-    <h3>{{ product.ar5 }} Ft</h3>
-    <h3>{{ rate12 }} Ft</h3>
+  <div class="product-card" *ngFor="let product of products39" style="max-height: 300px">
+    <img src="assets/termekek/988671_gembird_hdmi_vga_d_sub_atalakito_fekete_15cm_a_hdmi_vga_04.webp" style="max-width: 160px;max-height: 160px;position: absolute;z-index: 100;border: 1px solid #000000;margin-left: -10px">
+    <h3 class="asd" style="margin-left: 155px">{{ product.productName6 }}</h3>
+    <h3 class="asd" style="margin-left: 155px">{{ product.leiras5 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 165px">{{ product.ar5 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 165px;margin-left: 400px">{{ rate12.toFixed(2) }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
 
-    <input type="number" [(ngModel)]="quantity11" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <input type="number" [(ngModel)]="quantity11" min="0" class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 5px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 200px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity11)">
       Termék kosárba helyezése
     </button>
@@ -221,14 +228,17 @@
 
 <div class="search-results" *ngIf="products40 && products40.length ">
 
-  <div class="search-result" *ngFor="let product of products40">
-    <h3>{{ product.productName4 }}</h3>
-    <h3>{{ product.leiras3 }}</h3>
-    <h3>{{ product.ar3 }} Ft</h3>
-    <h3>{{ rate13 }}</h3>
+  <div class="product-card" *ngFor="let product of products40">
+    <img src="assets/termekek/1331059_msi_geforce_gtx_1660_6gb_gddr6_super_ventus_xs_oc_pcie.webp" style="max-width: 150px;max-height: 150px;position: absolute;z-index: 100;border: 1px solid #000000;margin-left: -18px">
 
-    <input type="number" [(ngModel)]="quantity12" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+
+    <h3 class="asd" style="margin-left: 135px">{{ product.productName4 }}</h3>
+    <h3 class="asd" style="margin-left: 135px">{{ product.leiras3 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 165px">{{ product.ar3 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 165px;margin-left: 400px">{{ rate13.toFixed(2)  }}<img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
+
+    <input type="number" [(ngModel)]="quantity12" min="0" class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 5px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 174px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity12)">
       Termék kosárba helyezése
     </button>
@@ -238,14 +248,15 @@
 
 <div class="search-results" *ngIf="products41 && products41.length ">
 
-  <div class="search-result" *ngFor="let product of products41">
-    <h3>{{ product.productName25 }}</h3>
-    <h3>{{ product.leiras24 }}</h3>
-    <h3>{{ product.ar24 }} Ft</h3>
-    <h3>{{ rate14 }}</h3>
+  <div class="product-card" *ngFor="let product of products41">
+    <img src="assets/termekek/1651167_spc_gear_gk650k_omnis_kailh_blue_rgb_nemet_fekete.webp" style="max-width: 150px;max-height: 150px;position: absolute;z-index: 100;border: 1px solid #000000;margin-left: -18px">
+    <h3  class="asd" style="margin-left: 135px">{{ product.productName25 }}</h3>
+    <h3 class="asd" style="margin-left: 135px">{{ product.leiras24 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 165px"> {{ product.ar24 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 165px;margin-left: 400px">{{ rate14.toFixed(2) }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
 
-    <input type="number" [(ngModel)]="quantity13" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <input type="number" [(ngModel)]="quantity13" min="0"  class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 5px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 174px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity13)">
       Termék kosárba helyezése
     </button>
@@ -255,14 +266,17 @@
 
 <div class="search-results" *ngIf="products42 && products42.length ">
 
-  <div class="search-result" *ngFor="let product of products42">
-    <h3>{{ product.productName17 }}</h3>
-    <h3>{{ product.leiras16 }}</h3>
-    <h3>{{ product.ar16 }} Ft</h3>
-    <h3>{{ rate15 }}</h3>
+  <div class="product-card" *ngFor="let product of products42">
+    <img src="assets/termekek/1992234_apple-iphone-14-pro-max-128gb-asztrofekete.webp" style="max-width: 150px;max-height: 150px;position: absolute;z-index: 100;border: 1px solid #000000;margin-left: -18px">
 
-    <input type="number" [(ngModel)]="quantity14" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+
+    <h3 class="asd" style="margin-left: 135px">{{ product.productName17 }}</h3>
+    <h3 class="asd" style="margin-left: 135px">{{ product.leiras16 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 165px">{{ product.ar16 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 165px;margin-left: 400px">{{ rate15.toFixed(2) }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
+
+    <input type="number" [(ngModel)]="quantity14" min="0" class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 5px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 174px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity14)">
       Termék kosárba helyezése
     </button>
@@ -272,14 +286,15 @@
 
 <div class="search-results" *ngIf="products43 && products43.length ">
 
-  <div class="search-result" *ngFor="let product of products43">
-    <h3>{{ product.productName10 }}</h3>
-    <h3>{{ product.leiras9 }}</h3>
-    <h3>{{ product.ar9 }} Ft</h3>
-    <h3>{{ rate16 }}</h3>
+  <div class="product-card" *ngFor="let product of products43">
+    <img src="assets/termekek/1546203_xiaomi_mi_smart_home_hub_mi_wifi_bluetooth_zigbee.webp" style="max-width: 130px;max-height: 130px;position: absolute;z-index: 100;border: 1px solid #000000">
+    <h3 class="asd" style="margin-left: 135px">{{ product.productName10 }}</h3>
+    <h3 class="asd" style="margin-left: 135px">{{ product.leiras9 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 165px">{{ product.ar9 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 165px;margin-left: 400px">{{ rate16.toFixed(2)  }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
 
-    <input type="number" [(ngModel)]="quantity15" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <input type="number" [(ngModel)]="quantity15" min="0" class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 5px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 174px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity15)">
       Termék kosárba helyezése
     </button>
@@ -289,14 +304,15 @@
 
 <div class="search-results" *ngIf="products44 && products44.length ">
 
-  <div class="search-result" *ngFor="let product of products44">
-    <h3>{{ product.productName13 }}</h3>
-    <h3>{{ product.leiras12 }}</h3>
-    <h3>{{ product.ar12 }} Ft</h3>
-    <h3>{{ rate17 }}</h3>
+  <div class="product-card" *ngFor="let product of products44">
+    <img src="assets/termekek/1974098_candy-rp-496bwmr-1-s-rapido-pro-mosogep-eloltoltos-9-kg-a-feher.webp" style="max-width: 150px;max-height: 150px;position: absolute;z-index: 100;border: 1px solid #000000;margin-left: -18px">
+    <h3 class="asd" style="margin-left: 135px">{{ product.productName13 }}</h3>
+    <h3 class="asd" style="margin-left: 135px">{{ product.leiras12 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 165px">{{ product.ar12 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 165px;margin-left: 400px">{{ rate17.toFixed(2)  }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
 
-    <input type="number" [(ngModel)]="quantity16" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <input type="number" [(ngModel)]="quantity16" min="0" class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 5px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 174px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity16)">
       Termék kosárba helyezése
     </button>
@@ -306,31 +322,36 @@
 
 <div class="search-results" *ngIf="products45 && products45.length ">
 
-  <div class="search-result" *ngFor="let product of products45">
-    <h3>{{ product.productName11 }}</h3>
-    <h3>{{ product.leiras10 }}</h3>
-    <h3>{{ product.ar10 }} Ft</h3>
-    <h3>{{ rate18 }}</h3>
+  <div class="product-card" *ngFor="let product of products45">
+    <img src="assets/termekek/1775292_xiaomi-smart-air-purifier-4-pro-legtisztito-feher.webp" style="max-width: 150px;max-height: 150px;position: absolute;z-index: 100;border: 1px solid #000000;margin-left: -18px">
 
-    <input type="number" [(ngModel)]="quantity17" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <h3 class="asd" style="margin-left: 135px">{{ product.productName11 }}</h3>
+    <h3  class="asd" style="margin-left: 135px"> {{ product.leiras10 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 165px">{{ product.ar10 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 165px;margin-left: 400px">{{ rate18.toFixed(2) }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
+
+    <input type="number" [(ngModel)]="quantity17" min="0" class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 5px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 174px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity17)">
       Termék kosárba helyezése
     </button>
+
 
   </div>
 </div>
 
 <div class="search-results" *ngIf="products46 && products46.length ">
 
-  <div class="search-result" *ngFor="let product of products46">
-    <h3>{{ product.productName2 }}</h3>
-    <h3>{{ product.leiras1 }}</h3>
-    <h3>{{ product.ar1 }} Ft</h3>
-    <h3>{{ rate19 }}</h3>
+  <div class="product-card" *ngFor="let product of products46" style="max-height: 300px;">
+    <img src="assets/termekek/1466859_asus_prime_b550m_k.webp" style="max-width: 160px;max-height: 160px;position: absolute;z-index: 100;border: 1px solid #000000;margin-left: -20px">
 
-    <input type="number" [(ngModel)]="quantity18" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <h3 class="asd" style="margin-left: 155px">{{ product.productName2 }}</h3>
+    <h3  class="asd" style="margin-left: 155px">{{ product.leiras1 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 185px">{{ product.ar1 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 185px;margin-left: 400px">{{ rate19.toFixed(2) }}  <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
+
+    <input type="number" [(ngModel)]="quantity18" min="0" class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 5px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 202px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity18)">
       Termék kosárba helyezése
     </button>
@@ -340,14 +361,16 @@
 
 <div class="search-results" *ngIf="products47 && products47.length ">
 
-  <div class="search-result" *ngFor="let product of products47">
-    <h3>{{ product.productName21 }}</h3>
-    <h3>{{ product.leiras20 }}</h3>
-    <h3>{{ product.ar20 }} Ft</h3>
-    <h3>{{ rate20 }}</h3>
+  <div class="product-card" *ngFor="let product of products47">
+    <img src="assets/termekek/1245069_sony_ubp_x800m2.webp" style="max-width: 150px;max-height: 150px;position: absolute;z-index: 100;border: 1px solid #000000">
 
-    <input type="number" [(ngModel)]="quantity19" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <h3  class="asd" style="margin-left: 155px">{{ product.productName21 }}</h3>
+    <h3  class="asd" style="margin-left: 155px">{{ product.leiras20 }}</h3>
+    <h3  class="asd" style="margin-left: 460px;position: absolute;margin-top: 165px">{{ product.ar20 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 165px;margin-left: 400px">{{ rate20.toFixed(2) }}  <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
+
+    <input type="number" [(ngModel)]="quantity19" min="0"  class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 5px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 174px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity19)">
       Termék kosárba helyezése
     </button>
@@ -357,14 +380,16 @@
 
 <div class="search-results" *ngIf="products48 && products48.length ">
 
-  <div class="search-result" *ngFor="let product of products48">
-    <h3>{{ product.productName3 }}</h3>
-    <h3>{{ product.leiras2 }}</h3>
-    <h3>{{ product.ar2 }} Ft</h3>
-    <h3>{{ rate21 }}</h3>
+  <div class="product-card" *ngFor="let product of products48" style="max-height: 300px">
+    <img src="assets/termekek/2138107_amd-ryzen-5-5600g-390ghz-am4-oem-100-100000252mpk.webp" style="max-width: 160px;max-height: 160px;position: absolute;z-index: 100;border: 1px solid #000000">
 
-    <input type="number" [(ngModel)]="quantity22" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <h3  class="asd" style="margin-left: 165px">{{ product.productName3 }}</h3>
+    <h3 class="asd" style="margin-left: 165px">{{ product.leiras2 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 185px">{{ product.ar2 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 185px;margin-left: 400px">{{ rate21.toFixed(2) }}  <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"> </h3>
+
+    <input type="number" [(ngModel)]="quantity22" min="0"  class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 5px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 202px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity22)">
       Termék kosárba helyezése
     </button>
@@ -374,14 +399,16 @@
 
 <div class="search-results" *ngIf="products49 && products49.length ">
 
-  <div class="search-result" *ngFor="let product of products49">
-    <h3>{{ product.productName7 }}</h3>
-    <h3>{{ product.leiras6 }}</h3>
-    <h3>{{ product.ar6 }} Ft</h3>
-    <h3>{{ rate22 }}</h3>
+  <div class="product-card" *ngFor="let product of products49" style="max-height: 300px">
+    <img src="assets/termekek/2100781_kingston-ironkey-vault-privacy-50c-16gb-usb-30-type-c-kek.webp" style="max-width: 170px;max-height: 170px;position: absolute;z-index: 100;border: 1px solid #000000;margin-left: -10px">
 
-    <input type="number" [(ngModel)]="quantity23" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <h3  class="asd" style="margin-left: 165px">{{ product.productName7 }}</h3>
+    <h3 class="asd" style="margin-left: 165px">{{ product.leiras6 }}</h3>
+    <h3  class="asd" style="margin-left: 460px;position: absolute;margin-top: 185px">{{ product.ar6 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 185px;margin-left: 400px">{{ rate22.toFixed(2) }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
+
+    <input type="number" [(ngModel)]="quantity23" min="0" class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: -5px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 220px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity23)">
       Termék kosárba helyezése
     </button>
@@ -391,14 +418,15 @@
 
 <div class="search-results" *ngIf="products50 && products50.length ">
 
-  <div class="search-result" *ngFor="let product of products50">
-    <h3>{{ product.productName22 }}</h3>
-    <h3>{{ product.leiras21 }}</h3>
-    <h3>{{ product.ar21 }} Ft</h3>
-    <h3>{{ rate23 }}</h3>
+  <div class="product-card" *ngFor="let product of products50">
+    <img src="assets/termekek/2033149_audio-technica-ath-sport60bt-fekete.webp" style="max-width: 130px;max-height: 130px;position: absolute;z-index: 100;border: 1px solid #000000">
+    <h3  class="asd" style="margin-left: 145px">{{ product.productName22 }}</h3>
+    <h3 class="asd" style="margin-left: 145px">{{ product.leiras21 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 165px">{{ product.ar21 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 165px;margin-left: 400px">{{ rate23.toFixed(2) }}  <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
 
-    <input type="number" [(ngModel)]="quantity24" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <input type="number" [(ngModel)]="quantity24" min="0"  class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: -5px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 165px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity24)">
       Termék kosárba helyezése
     </button>
@@ -408,14 +436,15 @@
 
 <div class="search-results" *ngIf="products51 && products51.length ">
 
-  <div class="search-result" *ngFor="let product of products51">
-    <h3>{{ product.productName8 }}</h3>
-    <h3>{{ product.leiras7 }}</h3>
-    <h3>{{ product.ar7 }} Ft</h3>
-    <h3>{{ rate24 }}</h3>
+  <div class="product-card" *ngFor="let product of products51">
+    <img src="assets/termekek/2000044_canyon-h-65-wall-charger-feher.webp" style="max-width: 130px;max-height: 130px;position: absolute;z-index: 100;border: 1px solid #000000">
+    <h3  class="asd" style="margin-left: 145px">{{ product.productName8 }}</h3>
+    <h3 class="asd" style="margin-left: 145px">{{ product.leiras7 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 135px">{{ product.ar7 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 135px;margin-left: 400px">{{ rate24.toFixed(2) }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
 
-    <input type="number" [(ngModel)]="quantity25" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <input type="number" [(ngModel)]="quantity25" min="0" class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 10px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 151px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity25)">
       Termék kosárba helyezése
     </button>
@@ -425,14 +454,16 @@
 
 <div class="search-results" *ngIf="products52 && products52.length ">
 
-  <div class="search-result" *ngFor="let product of products52">
-    <h3>{{ product.productName14 }}</h3>
-    <h3>{{ product.leiras13 }}</h3>
-    <h3>{{ product.ar13 }} Ft</h3>
-    <h3>{{ rate25 }}</h3>
+  <div class="product-card" *ngFor="let product of products52" style="max-height: 280px">
+    <img src="assets/termekek/1545603_candy_cstg_48te_1_s_mosogep_felultoltos_a____feher.webp" style="max-width: 170px;max-height: 170px;position: absolute;z-index: 100;border: 1px solid #000000;margin-left: -15px">
 
-    <input type="number" [(ngModel)]="quantity26" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <h3  class="asd" style="margin-left: 165px">{{ product.productName14 }}</h3>
+    <h3 class="asd" style="margin-left: 165px">{{ product.leiras13 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 195px">{{ product.ar13 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 195px;margin-left: 400px">{{ rate25.toFixed(2) }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
+
+    <input type="number" [(ngModel)]="quantity26" min="0" class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 0px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 195px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity26)">
       Termék kosárba helyezése
     </button>
@@ -442,14 +473,15 @@
 
 <div class="search-results" *ngIf="products53 && products53.length ">
 
-  <div class="search-result" *ngFor="let product of products53">
-    <h3>{{ product.productName23 }}</h3>
-    <h3>{{ product.leiras22 }}</h3>
-    <h3>{{ product.ar22 }} Ft</h3>
-    <h3>{{ rate26 }}</h3>
+  <div class="product-card" *ngFor="let product of products53"  style="max-height: 300px">
+    <img src="assets/termekek/SoundMAGIC_SM-E10-01_E10_fekete-piros_fulhallgato-i650663.jpg" style="max-width: 160px;max-height: 160px;position: absolute;z-index: 100;border: 1px solid #000000">
+    <h3  class="asd" style="margin-left: 165px">{{ product.productName23 }}</h3>
+    <h3  class="asd" style="margin-left: 165px">{{ product.leiras22 }}</h3>
+    <h3  class="asd" style="margin-left: 460px;position: absolute;margin-top: 195px">{{ product.ar22 }} Ft</h3>
+    <h3  class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 195px;margin-left: 400px">{{ rate26.toFixed(2) }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
 
-    <input type="number" [(ngModel)]="quantity27" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <input type="number" [(ngModel)]="quantity27" min="0" class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 0px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 195px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity27)">
       Termék kosárba helyezése
     </button>
@@ -459,14 +491,16 @@
 
 <div class="search-results" *ngIf="products54 && products54.length ">
 
-  <div class="search-result" *ngFor="let product of products54">
-    <h3>{{ product.productName26 }}</h3>
-    <h3>{{ product.leiras25 }}</h3>
-    <h3>{{ product.ar25 }} Ft</h3>
-    <h3>{{ rate27 }}</h3>
+  <div class="product-card" *ngFor="let product of products54">
+    <img src="assets/termekek/1724199_logitech_mx_anywhere_2s_2021_fekete.webp" style="max-width: 150px;max-height: 150px;position: absolute;z-index: 100;border: 1px solid #000000">
 
-    <input type="number" [(ngModel)]="quantity28" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <h3 class="asd" style="margin-left: 165px">{{ product.productName26 }}</h3>
+    <h3 class="asd" style="margin-left: 165px">{{ product.leiras25 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 165px">{{ product.ar25 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 165px;margin-left: 400px">{{ rate27.toFixed(2) }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
+
+    <input type="number" [(ngModel)]="quantity28" min="0"  class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 0px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 170px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity28)">
       Termék kosárba helyezése
     </button>
@@ -633,14 +667,16 @@
 
 <div class="search-results" *ngIf="products9 && products9.length ">
 
-  <div class="search-result" *ngFor="let product of products9">
-    <h3>{{ product.productName24 }}</h3>
-    <h3>{{ product.leiras23 }}</h3>
-    <h3>{{ product.ar23 }} Ft</h3>
-    <h3>{{ rate9 }}</h3>
+  <div class="product-card" *ngFor="let product of products9">
+    <img src="assets/termekek/1623968_corsair_k55_rgb_pro_us_angol_fekete.webp" style="max-width: 130px;max-height: 130px;position: absolute;z-index: 100;border: 1px solid #000000">
 
-    <input type="number" [(ngModel)]="quantity8" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <h3 class="asd" style="margin-left: 135px">{{ product.productName24 }}</h3>
+    <h3 class="asd" style="margin-left: 135px">{{ product.leiras23 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 135px">{{ product.ar23 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 135px;margin-left: 400px">{{ rate9.toFixed(2) }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
+
+    <input type="number" [(ngModel)]="quantity8" min="0"  class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 25px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 165px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity8)">
       Termék kosárba helyezése
     </button>
@@ -650,14 +686,16 @@
 
 <div class="search-results" *ngIf="products10 && products10.length ">
 
-  <div class="search-result" *ngFor="let product of products10">
-    <h3>{{ product.productName20 }}</h3>
-    <h3>{{ product.leiras19 }}</h3>
-    <h3>{{ product.ar19 }} Ft</h3>
-    <h3>{{ rate10 }}</h3>
+  <div class="product-card" *ngFor="let product of products10" style="max-height: 300px">
+    <img src="assets/termekek/1614246_samsung_au7000_4k_sik_smart_uhd_tv_55_ue55au7102kxxh.webp" style="max-width: 170px;max-height: 170px;position: absolute;z-index: 100;border: 1px solid #000000;margin-left: -18px">
 
-    <input type="number" [(ngModel)]="quantity9" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <h3 class="asd" style="margin-left: 155px">{{ product.productName20 }}</h3>
+    <h3  class="asd" style="margin-left: 155px">{{ product.leiras19 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 180px">{{ product.ar19 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 180px;margin-left: 400px">{{ rate10.toFixed(2) }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
+
+    <input type="number" [(ngModel)]="quantity9" min="0" class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 0px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 197px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity9)">
       Termék kosárba helyezése
     </button>
@@ -667,14 +705,16 @@
 
 <div class="search-results" *ngIf="products11 && products11.length ">
 
-  <div class="search-result" *ngFor="let product of products11">
-    <h3>{{ product.productName12 }}</h3>
-    <h3>{{ product.leiras11 }}</h3>
-    <h3>{{ product.ar11 }} Ft</h3>
-    <h3>{{ rate11 }}</h3>
+  <div class="product-card" *ngFor="let product of products11">
+    <img src="assets/termekek/1474885_camry_cr_8054_mosogep___centrifugalas.webp" style="max-width: 140px;max-height: 140px;position: absolute;z-index: 100;border: 1px solid #000000;margin-left: -9px">
 
-    <input type="number" [(ngModel)]="quantity10" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <h3 class="asd" style="margin-left: 135px">{{ product.productName12 }}</h3>
+    <h3  class="asd" style="margin-left: 135px">{{ product.leiras11 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 135px">{{ product.ar11 }} Ft</h3>
+    <h3  class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 135px;margin-left: 400px">{{ rate11.toFixed(2) }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
+
+    <input type="number" [(ngModel)]="quantity10" min="0"  class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: -5px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 165px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity10)">
       Termék kosárba helyezése
     </button>
@@ -684,14 +724,16 @@
 
 <div class="search-results" *ngIf="products12 && products12.length ">
 
-  <div class="search-result" *ngFor="let product of products12">
-    <h3>{{ product.productName6 }}</h3>
-    <h3>{{ product.leiras5 }}</h3>
-    <h3>{{ product.ar5 }} Ft</h3>
-    <h3>{{ rate12 }}</h3>
+  <div class="product-card" *ngFor="let product of products12" style="max-height: 300px">
+    <img src="assets/termekek/988671_gembird_hdmi_vga_d_sub_atalakito_fekete_15cm_a_hdmi_vga_04.webp" style="max-width: 160px;max-height: 160px;position: absolute;z-index: 100;border: 1px solid #000000;margin-left: -10px">
 
-    <input type="number" [(ngModel)]="quantity11" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <h3  class="asd" style="margin-left: 155px">{{ product.productName6 }}</h3>
+    <h3 class="asd" style="margin-left: 155px">{{ product.leiras5 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 165px">{{ product.ar5 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 165px;margin-left: 400px">{{ rate12.toFixed(2) }}  <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
+
+    <input type="number" [(ngModel)]="quantity11" min="0"  class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 5px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 200px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity11)">
       Termék kosárba helyezése
     </button>
@@ -701,14 +743,16 @@
 
 <div class="search-results" *ngIf="products13 && products13.length ">
 
-  <div class="search-result" *ngFor="let product of products13">
-    <h3>{{ product.productName4 }}</h3>
-    <h3>{{ product.leiras3 }}</h3>
-    <h3>{{ product.ar3 }} Ft</h3>
-    <h3>{{ rate13 }}</h3>
+  <div class="product-card" *ngFor="let product of products13">
+    <img src="assets/termekek/1331059_msi_geforce_gtx_1660_6gb_gddr6_super_ventus_xs_oc_pcie.webp" style="max-width: 150px;max-height: 150px;position: absolute;z-index: 100;border: 1px solid #000000;margin-left: -18px">
 
-    <input type="number" [(ngModel)]="quantity12" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <h3  class="asd" style="margin-left: 135px">{{ product.productName4 }}</h3>
+    <h3 class="asd" style="margin-left: 135px">{{ product.leiras3 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 165px">{{ product.ar3 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 165px;margin-left: 400px">{{ rate13.toFixed(2)  }}  <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
+
+    <input type="number" [(ngModel)]="quantity12" min="0"  class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 5px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 174px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity12)">
       Termék kosárba helyezése
     </button>
@@ -718,14 +762,16 @@
 
 <div class="search-results" *ngIf="products14 && products14.length ">
 
-  <div class="search-result" *ngFor="let product of products14">
-    <h3>{{ product.productName25 }}</h3>
-    <h3>{{ product.leiras24 }}</h3>
-    <h3>{{ product.ar24 }} Ft</h3>
-    <h3>{{ rate14 }}</h3>
+  <div class="product-card" *ngFor="let product of products14">
+    <img src="assets/termekek/1651167_spc_gear_gk650k_omnis_kailh_blue_rgb_nemet_fekete.webp" style="max-width: 150px;max-height: 150px;position: absolute;z-index: 100;border: 1px solid #000000;margin-left: -18px">
 
-    <input type="number" [(ngModel)]="quantity13" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <h3 class="asd" style="margin-left: 135px">{{ product.productName25 }}</h3>
+    <h3 class="asd" style="margin-left: 135px">{{ product.leiras24 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 165px">{{ product.ar24 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 165px;margin-left: 400px">{{ rate14.toFixed(2)  }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
+
+    <input type="number" [(ngModel)]="quantity13" min="0"  class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 5px">
+    <button  style="margin-left: 70px;width: 250px;position: absolute;margin-top: 174px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity13)">
       Termék kosárba helyezése
     </button>
@@ -735,14 +781,16 @@
 
 <div class="search-results" *ngIf="products15 && products15.length ">
 
-  <div class="search-result" *ngFor="let product of products15">
-    <h3>{{ product.productName17 }}</h3>
-    <h3>{{ product.leiras16 }}</h3>
-    <h3>{{ product.ar16 }} Ft</h3>
-    <h3>{{ rate15 }}</h3>
+  <div class="product-card" *ngFor="let product of products15">
+    <img src="assets/termekek/1992234_apple-iphone-14-pro-max-128gb-asztrofekete.webp" style="max-width: 150px;max-height: 150px;position: absolute;z-index: 100;border: 1px solid #000000;margin-left: -18px">
 
-    <input type="number" [(ngModel)]="quantity14" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <h3 class="asd" style="margin-left: 135px">{{ product.productName17 }}</h3>
+    <h3 class="asd" style="margin-left: 135px">{{ product.leiras16 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 165px">{{ product.ar16 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 165px;margin-left: 400px">{{ rate15.toFixed(2) }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
+
+    <input type="number" [(ngModel)]="quantity14" min="0" class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 5px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 174px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity14)">
       Termék kosárba helyezése
     </button>
@@ -752,14 +800,15 @@
 
 <div class="search-results" *ngIf="products16 && products16.length ">
 
-  <div class="search-result" *ngFor="let product of products16">
-    <h3>{{ product.productName10 }}</h3>
-    <h3>{{ product.leiras9 }}</h3>
-    <h3>{{ product.ar9 }} Ft</h3>
-    <h3>{{ rate16 }}</h3>
+  <div class="product-card" *ngFor="let product of products16">
+    <img src="assets/termekek/1546203_xiaomi_mi_smart_home_hub_mi_wifi_bluetooth_zigbee.webp" style="max-width: 130px;max-height: 130px;position: absolute;z-index: 100;border: 1px solid #000000">
+    <h3 class="asd" style="margin-left: 135px">{{ product.productName10 }}</h3>
+    <h3 class="asd" style="margin-left: 135px">{{ product.leiras9 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 165px">{{ product.ar9 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 165px;margin-left: 400px">{{ rate16.toFixed(2)  }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
 
-    <input type="number" [(ngModel)]="quantity15" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <input type="number" [(ngModel)]="quantity15" min="0" class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 5px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 174px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity15)">
       Termék kosárba helyezése
     </button>
@@ -769,14 +818,15 @@
 
 <div class="search-results" *ngIf="products17 && products17.length ">
 
-  <div class="search-result" *ngFor="let product of products17">
-    <h3>{{ product.productName13 }}</h3>
-    <h3>{{ product.leiras12 }}</h3>
-    <h3>{{ product.ar12 }} Ft</h3>
-    <h3>{{ rate17 }}</h3>
+  <div class="product-card" *ngFor="let product of products17">
+    <img src="assets/termekek/1974098_candy-rp-496bwmr-1-s-rapido-pro-mosogep-eloltoltos-9-kg-a-feher.webp" style="max-width: 150px;max-height: 150px;position: absolute;z-index: 100;border: 1px solid #000000;margin-left: -18px">
+    <h3 class="asd" style="margin-left: 135px">{{ product.productName13 }}</h3>
+    <h3 class="asd" style="margin-left: 135px">{{ product.leiras12 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 165px">{{ product.ar12 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 165px;margin-left: 400px">{{ rate17.toFixed(2)  }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
 
-    <input type="number" [(ngModel)]="quantity16" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <input type="number" [(ngModel)]="quantity16" min="0" class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 5px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 174px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity16)">
       Termék kosárba helyezése
     </button>
@@ -786,14 +836,16 @@
 
 <div class="search-results" *ngIf="products18 && products18.length ">
 
-  <div class="search-result" *ngFor="let product of products18">
-    <h3>{{ product.productName11 }}</h3>
-    <h3>{{ product.leiras10 }}</h3>
-    <h3>{{ product.ar10 }} Ft</h3>
-    <h3>{{ rate18 }}</h3>
+  <div class="product-card" *ngFor="let product of products18">
+    <img src="assets/termekek/1775292_xiaomi-smart-air-purifier-4-pro-legtisztito-feher.webp" style="max-width: 150px;max-height: 150px;position: absolute;z-index: 100;border: 1px solid #000000;margin-left: -18px">
 
-    <input type="number" [(ngModel)]="quantity17" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <h3 class="asd" style="margin-left: 135px">{{ product.productName11 }}</h3>
+    <h3  class="asd" style="margin-left: 135px"> {{ product.leiras10 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 165px">{{ product.ar10 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 165px;margin-left: 400px">{{ rate18.toFixed(2) }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
+
+    <input type="number" [(ngModel)]="quantity17" min="0" class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 5px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 174px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity17)">
       Termék kosárba helyezése
     </button>
@@ -803,14 +855,16 @@
 
 <div class="search-results" *ngIf="products19 && products19.length ">
 
-  <div class="search-result" *ngFor="let product of products19">
-    <h3>{{ product.productName2 }}</h3>
-    <h3>{{ product.leiras1 }}</h3>
-    <h3>{{ product.ar1 }} Ft</h3>
-    <h3>{{ rate19 }}</h3>
+  <div class="product-card" *ngFor="let product of products19" style="max-height: 300px">
+    <img src="assets/termekek/1466859_asus_prime_b550m_k.webp" style="max-width: 160px;max-height: 160px;position: absolute;z-index: 100;border: 1px solid #000000;margin-left: -20px">
 
-    <input type="number" [(ngModel)]="quantity18" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <h3 class="asd" style="margin-left: 155px">{{ product.productName2 }}</h3>
+    <h3  class="asd" style="margin-left: 155px">{{ product.leiras1 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 185px">{{ product.ar1 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 185px;margin-left: 400px">{{ rate19.toFixed(2) }}  <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
+
+    <input type="number" [(ngModel)]="quantity18" min="0" class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 5px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 202px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity18)">
       Termék kosárba helyezése
     </button>
@@ -820,14 +874,16 @@
 
 <div class="search-results" *ngIf="products20 && products20.length ">
 
-  <div class="search-result" *ngFor="let product of products20">
-    <h3>{{ product.productName21 }}</h3>
-    <h3>{{ product.leiras20 }}</h3>
-    <h3>{{ product.ar20 }} Ft</h3>
-    <h3>{{ rate20 }} </h3>
+  <div class="product-card" *ngFor="let product of products20">
+    <img src="assets/termekek/1245069_sony_ubp_x800m2.webp" style="max-width: 150px;max-height: 150px;position: absolute;z-index: 100;border: 1px solid #000000">
 
-    <input type="number" [(ngModel)]="quantity19" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <h3  class="asd" style="margin-left: 155px">{{ product.productName21 }}</h3>
+    <h3  class="asd" style="margin-left: 155px">{{ product.leiras20 }}</h3>
+    <h3  class="asd" style="margin-left: 460px;position: absolute;margin-top: 165px">{{ product.ar20 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 165px;margin-left: 400px">{{ rate20.toFixed(2) }}  <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
+
+    <input type="number" [(ngModel)]="quantity19" min="0"  class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 5px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 174px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity19)">
       Termék kosárba helyezése
     </button>
@@ -837,14 +893,16 @@
 
 <div class="search-results" *ngIf="products21 && products21.length ">
 
-  <div class="search-result" *ngFor="let product of products21">
-    <h3>{{ product.productName3 }}</h3>
-    <h3>{{ product.leiras2 }}</h3>
-    <h3>{{ product.ar2 }} Ft</h3>
-    <h3>{{ rate21 }} Ft</h3>
+  <div class="product-card" *ngFor="let product of products21" style="max-height: 300px">
+    <img src="assets/termekek/2138107_amd-ryzen-5-5600g-390ghz-am4-oem-100-100000252mpk.webp" style="max-width: 160px;max-height: 160px;position: absolute;z-index: 100;border: 1px solid #000000">
 
-    <input type="number" [(ngModel)]="quantity22" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <h3  class="asd" style="margin-left: 165px">{{ product.productName3 }}</h3>
+    <h3 class="asd" style="margin-left: 165px">{{ product.leiras2 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 185px">{{ product.ar2 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 185px;margin-left: 400px">{{ rate21.toFixed(2) }}  <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"> </h3>
+
+    <input type="number" [(ngModel)]="quantity22" min="0"  class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 5px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 202px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity22)">
       Termék kosárba helyezése
     </button>
@@ -854,14 +912,16 @@
 
 <div class="search-results" *ngIf="products22 && products22.length ">
 
-  <div class="search-result" *ngFor="let product of products22">
-    <h3>{{ product.productName7 }}</h3>
-    <h3>{{ product.leiras6 }}</h3>
-    <h3>{{ product.ar6 }} Ft</h3>
-    <h3>{{ rate22 }}</h3>
+  <div class="product-card" *ngFor="let product of products22" style="max-height: 300px">
+    <img src="assets/termekek/2100781_kingston-ironkey-vault-privacy-50c-16gb-usb-30-type-c-kek.webp" style="max-width: 170px;max-height: 170px;position: absolute;z-index: 100;border: 1px solid #000000;margin-left: -10px">
 
-    <input type="number" [(ngModel)]="quantity23" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <h3  class="asd" style="margin-left: 165px">{{ product.productName7 }}</h3>
+    <h3 class="asd" style="margin-left: 165px">{{ product.leiras6 }}</h3>
+    <h3  class="asd" style="margin-left: 460px;position: absolute;margin-top: 185px">{{ product.ar6 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 185px;margin-left: 400px">{{ rate22.toFixed(2) }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
+
+    <input type="number" [(ngModel)]="quantity23" min="0" class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: -5px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 220px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity23)">
       Termék kosárba helyezése
     </button>
@@ -871,14 +931,15 @@
 
 <div class="search-results" *ngIf="products23 && products23.length ">
 
-  <div class="search-result" *ngFor="let product of products23">
-    <h3>{{ product.productName22 }}</h3>
-    <h3>{{ product.leiras21 }}</h3>
-    <h3>{{ product.ar21 }} Ft</h3>
-    <h3>{{ rate23 }}</h3>
+  <div class="product-card" *ngFor="let product of products23">
+    <img src="assets/termekek/2033149_audio-technica-ath-sport60bt-fekete.webp" style="max-width: 130px;max-height: 130px;position: absolute;z-index: 100;border: 1px solid #000000">
+    <h3  class="asd" style="margin-left: 145px">{{ product.productName22 }}</h3>
+    <h3 class="asd" style="margin-left: 145px">{{ product.leiras21 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 165px">{{ product.ar21 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 165px;margin-left: 400px">{{ rate23.toFixed(2) }}  <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
 
-    <input type="number" [(ngModel)]="quantity24" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <input type="number" [(ngModel)]="quantity24" min="0"  class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: -5px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 165px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity24)">
       Termék kosárba helyezése
     </button>
@@ -888,14 +949,15 @@
 
 <div class="search-results" *ngIf="products24 && products24.length ">
 
-  <div class="search-result" *ngFor="let product of products24">
-    <h3>{{ product.productName8 }}</h3>
-    <h3>{{ product.leiras7 }}</h3>
-    <h3>{{ product.ar7 }} Ft</h3>
-    <h3>{{ rate24 }}</h3>
+  <div class="product-card" *ngFor="let product of products24">
+    <img src="assets/termekek/2000044_canyon-h-65-wall-charger-feher.webp" style="max-width: 130px;max-height: 130px;position: absolute;z-index: 100;border: 1px solid #000000">
+    <h3  class="asd" style="margin-left: 145px">{{ product.productName8 }}</h3>
+    <h3 class="asd" style="margin-left: 145px">{{ product.leiras7 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 135px">{{ product.ar7 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 135px;margin-left: 400px">{{ rate24.toFixed(2) }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
 
-    <input type="number" [(ngModel)]="quantity25" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <input type="number" [(ngModel)]="quantity25" min="0" class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 10px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 151px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity25)">
       Termék kosárba helyezése
     </button>
@@ -905,14 +967,16 @@
 
 <div class="search-results" *ngIf="products25 && products25.length ">
 
-  <div class="search-result" *ngFor="let product of products25">
-    <h3>{{ product.productName14 }}</h3>
-    <h3>{{ product.leiras13 }}</h3>
-    <h3>{{ product.ar13 }} Ft</h3>
-    <h3>{{ rate25 }}</h3>
+  <div class="product-card" *ngFor="let product of products25" style="max-height: 280px">
+    <img src="assets/termekek/1545603_candy_cstg_48te_1_s_mosogep_felultoltos_a____feher.webp" style="max-width: 170px;max-height: 170px;position: absolute;z-index: 100;border: 1px solid #000000;margin-left: -15px">
 
-    <input type="number" [(ngModel)]="quantity26" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <h3  class="asd" style="margin-left: 165px">{{ product.productName14 }}</h3>
+    <h3 class="asd" style="margin-left: 165px">{{ product.leiras13 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 195px">{{ product.ar13 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 195px;margin-left: 400px">{{ rate25.toFixed(2) }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
+
+    <input type="number" [(ngModel)]="quantity26" min="0" class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 0px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 195px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity26)">
       Termék kosárba helyezése
     </button>
@@ -922,14 +986,15 @@
 
 <div class="search-results" *ngIf="products26 && products26.length ">
 
-  <div class="search-result" *ngFor="let product of products26">
-    <h3>{{ product.productName23 }}</h3>
-    <h3>{{ product.leiras22 }}</h3>
-    <h3>{{ product.ar22 }} Ft</h3>
-    <h3>{{ rate26 }}</h3>
+  <div class="product-card" *ngFor="let product of products26" style="max-height: 300px">
+    <img src="assets/termekek/SoundMAGIC_SM-E10-01_E10_fekete-piros_fulhallgato-i650663.jpg" style="max-width: 160px;max-height: 160px;position: absolute;z-index: 100;border: 1px solid #000000">
+    <h3  class="asd" style="margin-left: 165px">{{ product.productName23 }}</h3>
+    <h3  class="asd" style="margin-left: 165px">{{ product.leiras22 }}</h3>
+    <h3  class="asd" style="margin-left: 460px;position: absolute;margin-top: 195px">{{ product.ar22 }} Ft</h3>
+    <h3  class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 195px;margin-left: 400px">{{ rate26.toFixed(2) }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
 
-    <input type="number" [(ngModel)]="quantity27" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <input type="number" [(ngModel)]="quantity27" min="0" class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 0px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 195px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity27)">
       Termék kosárba helyezése
     </button>
@@ -939,14 +1004,16 @@
 
 <div class="search-results" *ngIf="products27 && products27.length ">
 
-  <div class="search-result" *ngFor="let product of products27">
-    <h3>{{ product.productName26 }}</h3>
-    <h3>{{ product.leiras25 }}</h3>
-    <h3>{{ product.ar25 }} Ft</h3>
-    <h3>{{ rate27 }}</h3>
+  <div class="product-card" *ngFor="let product of products27">
+    <img src="assets/termekek/1724199_logitech_mx_anywhere_2s_2021_fekete.webp" style="max-width: 150px;max-height: 150px;position: absolute;z-index: 100;border: 1px solid #000000">
 
-    <input type="number" [(ngModel)]="quantity28" min="0">
-    <button class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    <h3 class="asd" style="margin-left: 165px">{{ product.productName26 }}</h3>
+    <h3 class="asd" style="margin-left: 165px">{{ product.leiras25 }}</h3>
+    <h3 class="asd" style="margin-left: 460px;position: absolute;margin-top: 165px">{{ product.ar25 }} Ft</h3>
+    <h3 class="asd" style="margin-right: 10px;float: right;position: absolute;margin-top: 165px;margin-left: 400px">{{ rate27.toFixed(2) }} <img src="assets/termekek/star-vector-png-transparent-image-pngpix-21.png" style="max-width: 20px;max-height: 20px;float: right;margin-left: 5px;margin-top: 2px"></h3>
+
+    <input type="number" [(ngModel)]="quantity28" min="0"  class="w-12 mt-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" style="width: 50px;margin-top: 0px">
+    <button style="margin-left: 70px;width: 250px;position: absolute;margin-top: 170px" class="bg-white text-black active:bg-purple-700 font-bold uppercase text-sm px-2 py-1 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button" (click)="addToCart(product, quantity28)">
       Termék kosárba helyezése
     </button>
