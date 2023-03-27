@@ -3,6 +3,7 @@ import {TermekService} from "../../shared/services/termek.service";
 import {ProductService} from "../../shared/services/product.service";
 import {KosarService} from "../../shared/services/kosar.service";
 import {RatingService} from "../../shared/services/rating.service";
+import {AuthService} from "../../shared/services/auth.service";
 
 @Component({
   selector: 'app-termekek',
@@ -10,6 +11,8 @@ import {RatingService} from "../../shared/services/rating.service";
   styleUrls: ['./termekek.component.scss']
 })
 export class TermekekComponent implements OnInit {
+
+  user$ = this.authS.currentUser$;
 
   products: any[] | undefined;
   products2: any[] | undefined;
@@ -98,7 +101,7 @@ export class TermekekComponent implements OnInit {
   rate27: number = 0;
   rate28: number = 0;
 
-  constructor(private termekService: TermekService,private productService: ProductService,private cartService: KosarService,private rating: RatingService) { }
+  constructor(private termekService: TermekService,private productService: ProductService,private cartService: KosarService,private rating: RatingService,private authS: AuthService) { }
 
   ngOnInit() {
     this.termekService.getProductsByCategory("Számítógép alkatrész").subscribe(products => {
@@ -431,8 +434,11 @@ export class TermekekComponent implements OnInit {
   }
 
   addToCart(product: any, quantity: number) {
-    this.cartService.addToCart(product, quantity);
-    console.log("működik");
+    if(this.user$ !== null){
+      this.cartService.addToCart(product, quantity);
+      console.log("működik");
+    }
+
   }
 
 

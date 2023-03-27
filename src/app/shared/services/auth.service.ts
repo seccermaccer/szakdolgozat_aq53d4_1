@@ -10,15 +10,20 @@ import {AngularFirestore} from "@angular/fire/compat/firestore";
 })
 export class AuthService {
 
+  private loggedIn: boolean;
+
   currentUser$ = authState(this.auth);
 
-  constructor(private authh: AngularFireAuth,private router: Router,private auth: Auth,private firestore: AngularFirestore) { }
+  constructor(private authh: AngularFireAuth,private router: Router,private auth: Auth,private firestore: AngularFirestore) {
+    this.loggedIn = false;
+  }
 
   sendEmail(user: any) {
     user.sendEmailVerification();
   }
 
   login(username: string,password: string){
+    this.loggedIn = true;
     return this.authh.signInWithEmailAndPassword(username,password);
   }
 
@@ -57,5 +62,11 @@ export class AuthService {
   getCategories(): Observable<any> {
     return this.firestore.collection('Categories').valueChanges();
   }
+
+  isAuthenticated(): boolean {
+    // Az isAuthenticated() metódus visszaadja az aktuális bejelentkezési állapotot
+    return this.loggedIn;
+  }
+
 
 }

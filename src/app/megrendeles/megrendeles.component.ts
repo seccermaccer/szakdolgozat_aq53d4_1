@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {KosarService} from "../shared/services/kosar.service";
+import {AuthService} from "../shared/services/auth.service";
 
 @Component({
   selector: 'app-megrendeles',
@@ -11,17 +12,22 @@ export class MegrendelesComponent implements OnInit {
 
   totalPrice: number = 0;
 
-  constructor(private router: Router,private kosarS: KosarService) { }
+  constructor(private router: Router,private kosarS: KosarService,private authS: AuthService) { }
 
   ngOnInit(): void {
   }
 
 
   order(){
-    if(confirm('Biztosan szeretnéd megrendelni az adott termékeket?Csak akkor fogadd el!')){
-      window.alert('Sikeres megrendelés hamarosan tájékoztatunk a továbbiakról!')
-      this.router.navigate(['fooldal'])
-      this.kosarS.clearCart();
+    if(this.authS.isAuthenticated()){
+      if(confirm('Biztosan szeretnéd megrendelni az adott termékeket?Csak akkor fogadd el!')){
+        window.alert('Sikeres megrendelés hamarosan tájékoztatunk a továbbiakról!')
+        this.router.navigate(['fooldal'])
+        this.kosarS.clearCart();
+      }
+    }else{
+      window.alert("Először jelentkezz be!")
+      this.router.navigate(['bejelentkezes'])
     }
   }
 
