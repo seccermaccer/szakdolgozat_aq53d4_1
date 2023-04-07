@@ -68,5 +68,19 @@ export class AuthService {
     return this.loggedIn;
   }
 
+  async deleteUser() {
+    try {
+      const user = await this.authh.currentUser;
+      if (user) {
+        await user.delete();
+        console.log('A felhasználó sikeresen törölve.');
+      } else {
+        console.log('Nincs bejelentkezett felhasználó.');
+      }
+    } catch (error) {
+      console.error('Hiba a felhasználó törlése közben:', error);
+    }
+  }
+
 
 }

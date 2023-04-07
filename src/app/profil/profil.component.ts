@@ -4,6 +4,7 @@ import {User} from "../shared/models/User";
 import {AuthService} from "../shared/services/auth.service";
 import {ImageUploadService} from "../shared/services/image-upload.service";
 import {concatMap} from "rxjs";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-profil',
@@ -16,7 +17,7 @@ export class ProfilComponent implements OnInit {
 
   user$ = this.authS.currentUser$;
 
-  constructor(private userS: UserService,private authS: AuthService,private imageS: ImageUploadService) { }
+  constructor(private userS: UserService,private authS: AuthService,private imageS: ImageUploadService,private router: Router) { }
 
   ngOnInit(): void {
     const user = JSON.parse(localStorage.getItem('user') as string) as firebase.default.User;
@@ -38,6 +39,8 @@ export class ProfilComponent implements OnInit {
       this.userS.delete($id);
       this.authS.logout();
       window.alert("Sikeres felhasználó törlés!");
+      this.authS.deleteUser();
+      this.router.navigate(['fooldal'])
     }
 
   }
