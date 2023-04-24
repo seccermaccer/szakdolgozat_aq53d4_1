@@ -28,3 +28,51 @@
     margin-left: 33vw;
   }
 }
+
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Módosítás itt */
+  min-height: 100vh;
+  padding-top: 2rem; /* Hozzáadva itt */
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 80%;
+  max-width: 600px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: #333333;
+  margin-bottom: 1rem;
+}
+
+/* Reszponzív design */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+}
+
