@@ -6,12 +6,13 @@ import {HttpClient} from "@angular/common/http";
 })
 export class HirekService {
 
-  private apiKey = '63c0d575770b451db9df9b90dbe1c6a9';
+  private apiKey = 'f262bd76e18679696590d8a860a567c8';
+  private apiUrl = 'https://gnews.io/api/v4';
 
   constructor(private http: HttpClient) {}
 
   getNews() {
-    const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${this.apiKey}`;
+    const url = `${this.apiUrl}/search?q=technology&lang=en&sort_by=relevancy&page=1&token=${this.apiKey}`;
     return this.http.get(url);
   }
 
