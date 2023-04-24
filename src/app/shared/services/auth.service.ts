@@ -36,6 +36,7 @@ export class AuthService {
   }
 
   logout(){
+    this.loggedIn = false;
     return this.authh.signOut();
   }
 
