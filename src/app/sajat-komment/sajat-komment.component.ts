@@ -39,9 +39,11 @@ export class SajatKommentComponent implements OnInit {
   }
 
   deleteComment(commentId: string | undefined) {
-    const index = this.comments.findIndex(comment => comment.id === commentId);
-    this.comments.splice(index, 1);
-    this.commentS.delete(<string>commentId);
+    if(confirm("Biztos kiszeretnéd törölni a kommentedet?")){
+      const index = this.comments.findIndex(comment => comment.id === commentId);
+      this.comments.splice(index, 1);
+      this.commentS.delete(<string>commentId);
+    }
   }
 
   updateComment2(commentId: string | undefined, index: number) {
